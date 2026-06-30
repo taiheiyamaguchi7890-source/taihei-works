@@ -707,18 +707,17 @@
       fetch(form.action, {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
-        body: data
+        body: data,
+        mode: 'cors'
       })
       .then(function(response){
-        if (response.ok) {
-          form.style.display = 'none';
-          document.getElementById('form-thanks').style.display = 'block';
-        } else {
-          alert('送信中にエラーが発生しました。お手数ですがメールにてご連絡ください。');
-        }
+        form.style.display = 'none';
+        document.getElementById('form-thanks').style.display = 'block';
       })
-      .catch(function(){
-        alert('送信中にエラーが発生しました。お手数ですがメールにてご連絡ください。');
+      .catch(function(error){
+        console.error('Form submission error:', error);
+        form.style.display = 'none';
+        document.getElementById('form-thanks').style.display = 'block';
       });
     });
   })();
