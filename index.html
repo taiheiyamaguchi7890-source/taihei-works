@@ -624,9 +624,10 @@
           送信内容は <a href="mailto:taiheiyamaguchi7890@gmail.com" style="color:#93c5fd;">taiheiyamaguchi7890@gmail.com</a> に届きます
         </p>
       </form>
-      <div id="form-thanks" style="display:none; text-align:center; padding:40px 20px;">
-        <h3 style="color:#fff; margin-bottom:12px;">送信ありがとうございます！</h3>
-        <p style="color:#93c5fd;">内容を確認の上、通常24時間以内にご返信いたします。</p>
+      <div id="form-thanks" style="display:none; text-align:center; padding:48px 24px; background:rgba(255,255,255,0.08); border-radius:16px; border:2px solid rgba(255,255,255,0.25);">
+        <div style="font-size:48px; margin-bottom:16px;">✅</div>
+        <h3 style="color:#fff; margin-bottom:12px; font-size:24px;">送信ありがとうございます！</h3>
+        <p style="color:#93c5fd; font-size:16px;">内容を確認の上、通常24時間以内にご返信いたします。</p>
       </div>
     </div>
   </div>
@@ -716,12 +717,16 @@
       })
       .then(function(response){
         form.style.display = 'none';
-        document.getElementById('form-thanks').style.display = 'block';
+        var thanks = document.getElementById('form-thanks');
+        thanks.style.display = 'block';
+        thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
       })
       .catch(function(error){
         console.error('Form submission error:', error);
         form.style.display = 'none';
-        document.getElementById('form-thanks').style.display = 'block';
+        var thanks = document.getElementById('form-thanks');
+        thanks.style.display = 'block';
+        thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
     });
   })();
