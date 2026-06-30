@@ -703,15 +703,19 @@
     if(!form) return;
     form.addEventListener('submit', function(e){
       e.preventDefault();
-      var data = new URLSearchParams(new FormData(form)).toString();
-      fetch('/', {
+      var data = new FormData(form);
+      fetch(form.action, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 'Accept': 'application/json' },
         body: data
       })
-      .then(function(){
-        form.style.display = 'none';
-        document.getElementById('form-thanks').style.display = 'block';
+      .then(function(response){
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-thanks').style.display = 'block';
+        } else {
+          alert('送信中にエラーが発生しました。お手数ですがメールにてご連絡ください。');
+        }
       })
       .catch(function(){
         alert('送信中にエラーが発生しました。お手数ですがメールにてご連絡ください。');
