@@ -272,3 +272,22 @@
   w.addEventListener('load', function () { hsSize(); onScroll(); });
   hsSize(); onScroll();
 })();
+
+/* ===== カーソル（PCのみ・動きを減らす設定では出さない） ===== */
+(function () {
+  var mq = window.matchMedia('(hover:hover) and (pointer:fine)');
+  if (!mq.matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    var cur = document.createElement('div'); cur.className = 'cur'; cur.setAttribute('aria-hidden', 'true'); cur.innerHTML = '<span>view</span>';
+    document.body.appendChild(cur); document.documentElement.classList.add('has-cur');
+    var mx = 0, my = 0, x = 0, y = 0, run = false;
+    function loop() { x += (mx - x) * .2; y += (my - y) * .2; cur.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)'; if (Math.abs(mx - x) + Math.abs(my - y) > .3) requestAnimationFrame(loop); else run = false; }
+    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; cur.classList.add('is-on'); if (!run) { run = true; requestAnimationFrame(loop); } });
+    document.documentElement.addEventListener('mouseleave', function () { cur.classList.remove('is-on'); });
+    document.addEventListener('mouseover', function (e) {
+      var v = e.target.closest('[data-view],.wk__card');
+      var l = e.target.closest('a,button,summary,input,select,textarea,label,[role="tab"]');
+      cur.classList.toggle('is-view', !!v); cur.classList.toggle('is-link', !!l && !v);
+    });
+  });
+})();
