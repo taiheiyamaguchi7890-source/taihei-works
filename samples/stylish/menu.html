@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>メニュー｜こもれび食堂（見本サイト）</title>
+<meta name="description" content="こもれび食堂の定食・一品メニュー。※見本用の架空のお店です。">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<p class="demo-bar">このサイトは、ホームページ制作の見本としてつくった架空のお店です。</p>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="logo" href="index.html"><b>KOMOREBI</b><span>こもれび食堂</span></a>
+    <nav class="gnav" aria-label="メインメニュー"><a href="menu.html" aria-current="page"><span>メニュー</span><span aria-hidden="true">メニュー</span></a><a href="about.html"><span>お店のこと</span><span aria-hidden="true">お店のこと</span></a><a href="access.html"><span>アクセス・お問い合わせ</span><span aria-hidden="true">アクセス・お問い合わせ</span></a></nav>
+    <a class="btn btn--sm" href="tel:0300000000">電話する<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="スマホ用メニュー"><a href="index.html">ホーム<small>Home</small></a><a href="menu.html">メニュー<small>Menu</small></a><a href="about.html">お店のこと<small>About</small></a><a href="access.html">アクセス・お問い合わせ<small>Access</small></a></nav>
+</header>
+<main>
+<section class="phead">
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">ホーム</a> ／ メニュー</p>
+    <p class="phead__en" aria-hidden="true"><span>Menu</span></p>
+    <div class="phead__row"><h1>メニュー</h1><p>定食にはすべて、ごはん・お味噌汁・小鉢2品・お漬物がつきます。ごはんのおかわりは無料です。</p></div>
+  </div>
+</section>
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="ttl rv"><div><span class="ttl__en">Set meals</span><span class="ttl__ja">定食</span></div></div>
+    <ul class="mgrid">
+      <li class="mitem rv"><div class="mitem__ph zoom"><img src="images/teishoku_close.jpg" alt="日替わり定食" width="1000" height="714" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="mitem__b"><div><span class="badge">いちばん人気</span><br><h3>日替わり定食</h3></div><span class="pr">¥900</span><p>主菜はその日の仕入れで決めます。内容は店頭の黒板とInstagramでお知らせしています（税込）</p></div></li>
+      <li class="mitem rv"><div class="mitem__ph zoom"><img src="images/karaage.jpg" alt="唐揚げ定食" width="640" height="640" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="mitem__b"><div><h3>唐揚げ定食</h3></div><span class="pr">¥950</span><p>しょうがとにんにくを効かせた下味で、ひと晩寝かせてから揚げます。5個入り（税込）</p></div></li>
+      <li class="mitem rv"><div class="mitem__ph zoom"><img src="images/tonkatsu.jpg" alt="とんかつ定食" width="1000" height="1250" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="mitem__b"><div><h3>とんかつ定食</h3></div><span class="pr">¥1,100</span><p>厚めのロースを低めの温度でじっくり。ソースは野菜と果物を煮込んだ自家製です（税込）</p></div></li>
+      <li class="mitem rv"><div class="mitem__ph zoom"><img src="images/kobachi.jpg" alt="小鉢いろいろ定食" width="1000" height="1500" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="mitem__b"><div><h3>小鉢いろいろ定食</h3></div><span class="pr">¥1,000</span><p>その日の小鉢を5品。お肉やお魚が少なめの日がいい、という方に（税込）</p></div></li>
+    </ul>
+  </div>
+</section>
+<section class="sec" style="background:var(--c-face)">
+  <div class="wrap">
+    <div class="mcols">
+      <div class="rv"><h3>そのほかの定食</h3><ul class="mlist">
+        <li><span>焼き魚定食<small>さば・鮭・ほっけから</small></span><span class="pr">¥950</span></li>
+        <li><span>しょうが焼き定食</span><span class="pr">¥980</span></li>
+        <li><span>さばの味噌煮定食</span><span class="pr">¥980</span></li>
+        <li><span>豚汁定食<small>おにぎり2個つき</small></span><span class="pr">¥850</span></li></ul></div>
+      <div class="rv"><h3>一品・お飲みもの</h3><ul class="mlist">
+        <li><span>だし巻き玉子</span><span class="pr">¥380</span></li>
+        <li><span>きょうの小鉢<small>1品</small></span><span class="pr">¥200</span></li>
+        <li><span>ほうじ茶・麦茶</span><span class="pr">¥0</span></li>
+        <li><span>瓶ビール<small>夜のみ</small></span><span class="pr">¥600</span></li></ul></div>
+    </div>
+    <div class="note rv" style="background:#fff"><ul><li>ごはんは「少なめ」「大盛り」を同じ値段でお選びいただけます。</li><li>お弁当のお持ち帰りは、前日までのご予約で承ります。</li><li>価格はすべて見本用の架空の金額です。</li></ul></div>
+  </div>
+</section>
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <dl>
+        <dt>店名</dt><dd>こもれび食堂</dd>
+        <dt>住所</dt><dd>東京都〇〇区〇〇 1-2-3（架空の住所です）</dd>
+        <dt>電話</dt><dd>03-0000-0000</dd>
+        <dt>営業時間</dt><dd>昼 11:00〜15:00（L.O. 14:30）<br>夜 17:30〜21:00（L.O. 20:30）</dd>
+        <dt>定休日</dt><dd>水曜日</dd>
+      </dl>
+      <nav class="ft__nav" aria-label="フッターメニュー"><a href="index.html">ホーム</a><a href="menu.html">メニュー</a><a href="about.html">お店のこと</a><a href="access.html">アクセス・お問い合わせ</a></nav>
+    </div>
+  </div>
+  <p class="ft__word" aria-hidden="true">KOMOREBI</p>
+  <div class="wrap ft__copy"><span>© こもれび食堂（見本）</span><span>Sample site by Harukaze Works</span></div>
+</footer>
+<a class="fcard" href="menu.html"><span><small>Today&#39;s special</small>本日の日替わり</span><span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* ライトプラン（1ページ）用の追加 */
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+.hero__main--light img{transform:none}
+.lt-narrow{max-width:720px}
+.lt-about{padding-bottom:96px}
+.lt-about p{text-align:center}
+.lt-more{text-align:center;margin-top:40px;font-size:14px;color:var(--c-sub)}
+.lt-panel{padding:56px clamp(20px,5vw,56px)}
+.lt-sns{margin-top:48px;text-align:center}
+.lt-sns__links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:20px}
+.lt-sns svg{width:18px;height:18px}
+.card{cursor:default}
+.ft__copy{margin-top:40px}
+@media (max-width:767px){.lt-about p{text-align:left}.lt-panel{padding:36px 20px}html{scroll-padding-top:72px}}

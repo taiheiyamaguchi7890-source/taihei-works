@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>こもれび食堂｜まちの定食屋（見本サイト）</title>
+<meta name="description" content="〇〇駅から徒歩3分の定食屋、こもれび食堂。日替わり定食・唐揚げ定食など。※ホームページ制作の見本用の架空のお店です。">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<p class="demo-bar">このサイトは、ホームページ制作の見本としてつくった架空のお店です。</p>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="logo" href="index.html"><b>KOMOREBI</b><span>こもれび食堂</span></a>
+    <nav class="gnav" aria-label="メインメニュー"><a href="menu.html"><span>メニュー</span><span aria-hidden="true">メニュー</span></a><a href="about.html"><span>お店のこと</span><span aria-hidden="true">お店のこと</span></a><a href="access.html"><span>アクセス・お問い合わせ</span><span aria-hidden="true">アクセス・お問い合わせ</span></a></nav>
+    <a class="btn btn--sm" href="tel:0300000000">電話する<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="スマホ用メニュー"><a href="index.html">ホーム<small>Home</small></a><a href="menu.html">メニュー<small>Menu</small></a><a href="about.html">お店のこと<small>About</small></a><a href="access.html">アクセス・お問い合わせ<small>Access</small></a></nav>
+</header>
+<main>
+<section class="hero">
+  <p class="hero__word" aria-hidden="true"><span class="ch" style="--i:0">K</span><span class="ch" style="--i:1">O</span><span class="ch" style="--i:2">M</span><span class="ch" style="--i:3">O</span><span class="ch" style="--i:4">R</span><span class="ch" style="--i:5">E</span><span class="ch" style="--i:6">B</span><span class="ch" style="--i:7">I</span></p>
+  <div class="wrap hero__row">
+    <div class="hero__copy">
+      <p class="hero__label">( Komorebi Shokudo )</p>
+      <h1><span class="line"><span style="--i:0">ただいま、って</span></span><span class="line"><span style="--i:1">言いたくなる定食屋。</span></span></h1>
+      <p class="hero__lead rv">炊きたてのごはんと、毎朝とるおだしのお味噌汁。ひとりでも、家族でも、ふらっと寄れるまちの食堂です。</p>
+      <div class="hero__actions rv"><a class="btn " href="menu.html">メニューを見る<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a><a class="btn btn--line" href="access.html">アクセス<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a></div>
+    </div>
+    <div class="hero__photo zoom"><img src="images/hero_teishoku.jpg" alt="お盆にのった日替わり定食" width="1400" height="1750" onerror="this.parentElement.classList.add('photo-empty');this.remove();"><span class="hero__tag"><i></i>きょうの日替わり：鶏の照り焼き定食</span></div>
+  </div>
+  <div class="bar"><div class="wrap bar__in"><span><b>Lunch</b>11:00〜15:00</span><span><b>Dinner</b>17:30〜21:00</span><span><b>Closed</b>水曜日</span><a href="tel:0300000000">TEL 03-0000-0000</a></div></div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="ttl rv"><div><span class="ttl__en">Popular</span><span class="ttl__ja">よく選ばれている定食</span></div><a class="btn btn--line" href="menu.html">すべてのメニュー<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a></div>
+    <ul class="cards cards--stagger">
+      <li class="rv"><a class="card" href="menu.html"><div class="card__ph"><img src="images/teishoku_close.jpg" alt="日替わり定食" width="1000" height="714" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="card__b"><h3>日替わり定食</h3><span class="pr">¥900</span></div><p>主菜はその日の仕入れで決めます。小鉢2品とお味噌汁つき。</p></a></li>
+      <li class="rv"><a class="card" href="menu.html"><div class="card__ph"><img src="images/karaage.jpg" alt="唐揚げ定食" width="640" height="640" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="card__b"><h3>唐揚げ定食</h3><span class="pr">¥950</span></div><p>しょうがを効かせた下味で、ひと晩寝かせてから揚げます。</p></a></li>
+      <li class="rv"><a class="card" href="menu.html"><div class="card__ph"><img src="images/tonkatsu.jpg" alt="とんかつ定食" width="1000" height="1250" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div><div class="card__b"><h3>とんかつ定食</h3><span class="pr">¥1,100</span></div><p>厚めのロースを、低めの温度でじっくり。ソースは自家製です。</p></a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="mq" aria-label="装飾の流れる文字">
+  <div class="mq__track" aria-hidden="true">
+    <span class="mq__item">Gohan<i></i>Miso soup<i></i>Teishoku<i></i></span>
+    <span class="mq__item">Gohan<i></i>Miso soup<i></i>Teishoku<i></i></span>
+  </div>
+  <button class="mq__btn" type="button" aria-pressed="false">一時停止</button>
+</div>
+
+<section class="s01s">
+  <div class="s01s__bg">
+    <img class="is-on" src="images/counter.jpg" alt="" width="1400" height="1050" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();">
+    <img src="images/kobachi.jpg" alt="" width="1000" height="1500" loading="lazy">
+    <span class="s01s__veil"></span>
+  </div>
+  <div class="s01s__body">
+    <div class="wrap">
+      <div class="s01s__step" data-bg="0"><div class="ttl ttl--white rv" style="margin:0"><div><span class="ttl__en">About us</span><span class="ttl__ja">まいにち通える、ふつうのごはん</span></div></div></div>
+      <div class="s01s__step" data-bg="0"><p class="rv">商店街のはずれにある、小さな定食屋です。<small>特別なごちそうではなく、毎日食べても飽きない「いつものごはん」を大切にしています。</small></p></div>
+      <div class="s01s__step" data-bg="1"><p class="rv">ごはんのおかわりは、いつでも無料。<small>小鉢は日によって変わるので、何度来ても小さな発見があります。</small></p></div>
+      <div class="s01s__step" data-bg="1" style="min-height:40vh"><div class="rv"><a class="btn " href="about.html">お店のことをもっと見る<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="ttl rv"><div><span class="ttl__en">Open hours</span><span class="ttl__ja">営業のご案内</span></div></div>
+    <div class="stack">
+      <div class="sx sx--a"><span class="sx__tag">日替わりあり</span><div><p class="sx__en">Lunch</p><p class="sx__time">11:00 – 15:00</p></div><div><h3>お昼の定食</h3><p>ラストオーダーは14:30。お昼はおひとりのお客さまがいちばん多い時間です。カウンター6席あります。</p></div></div>
+      <div class="sx sx--b"><div><p class="sx__en">Dinner</p><p class="sx__time">17:30 – 21:00</p></div><div><h3>夜の定食と一品</h3><p>ラストオーダーは20:30。定食のほか、だし巻き玉子などの一品と瓶ビールもご用意しています。</p></div></div>
+      <div class="sx sx--c"><span class="sx__tag">祝日は営業</span><div><p class="sx__en">Closed</p><p class="sx__time">Wednesday</p></div><div><h3>水曜日はお休み</h3><p>祝日の場合は営業し、翌日にお休みします。お席はカウンター6席・テーブル16席です。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="ig rv">
+      <span class="ig__glyph"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></span>
+      <div class="ig__txt"><b>きょうの日替わりは、Instagramで。</b><span>@komorebi_shokudo（見本）</span><ul class="chips"><li>日替わりのおかず</li><li>季節の小鉢</li><li>臨時休業のお知らせ</li></ul></div>
+      <a class="btn " href="#">Instagramを見る<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec cta cta--arc">
+  <div class="wrap">
+    <p class="cta__big rv">Come<br>hungry.</p>
+    <div class="cta__grid">
+      <p class="rv">6名さま以上のご来店は、前日までにお電話ください。お弁当のご相談も受けつけています。</p>
+      <div class="rv"><a class="cta__tel" href="tel:0300000000">03-0000-0000</a><div class="cta__acts"><a class="btn " href="access.html">アクセス・お問い合わせ<span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a></div></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <dl>
+        <dt>店名</dt><dd>こもれび食堂</dd>
+        <dt>住所</dt><dd>東京都〇〇区〇〇 1-2-3（架空の住所です）</dd>
+        <dt>電話</dt><dd>03-0000-0000</dd>
+        <dt>営業時間</dt><dd>昼 11:00〜15:00（L.O. 14:30）<br>夜 17:30〜21:00（L.O. 20:30）</dd>
+        <dt>定休日</dt><dd>水曜日</dd>
+      </dl>
+      <nav class="ft__nav" aria-label="フッターメニュー"><a href="index.html">ホーム</a><a href="menu.html">メニュー</a><a href="about.html">お店のこと</a><a href="access.html">アクセス・お問い合わせ</a></nav>
+    </div>
+  </div>
+  <p class="ft__word" aria-hidden="true">KOMOREBI</p>
+  <div class="wrap ft__copy"><span>© こもれび食堂（見本）</span><span>Sample site by Harukaze Works</span></div>
+</footer>
+<a class="fcard" href="menu.html"><span><small>Today&#39;s special</small>本日の日替わり</span><span class="btn__box"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span></a>
+</body>
+</html>
