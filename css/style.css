@@ -676,3 +676,17 @@ html.js .qa.is-open .qa__a{grid-template-rows:1fr}
 .plan__shot--long img{position:absolute;left:0;top:0;height:auto;object-fit:fill;animation:planLong 16s cubic-bezier(.45,0,.55,1) infinite alternate}
 @keyframes planLong{0%,10%{transform:none}90%,100%{transform:translateY(-79.9%)}}
 @media (prefers-reduced-motion:reduce){.plan__shot--long img{animation:none}}
+
+/* ===== 2026-10-05 改修：必要な理由 5枚／実績ラベル ===== */
+.cards5{grid-template-columns:repeat(6,minmax(0,1fr))}
+.cards5 .card{grid-column:span 2}
+.cards5 .card:nth-child(4),.cards5 .card:nth-child(5){grid-column:span 3}
+.cards5 .card:nth-child(4){transition-delay:.24s}
+.cards5 .card:nth-child(5){transition-delay:.32s}
+.why__close{text-align:center;margin:48px auto 0;font-weight:700;font-size:clamp(16px,1.6vw,19px);line-height:1.9}
+.wk__no,.next__no{font-size:clamp(40px,4.4vw,56px);letter-spacing:.01em}
+@media (max-width:1023px){
+  .cards5{grid-template-columns:minmax(0,1fr)}
+  .cards5 .card,.cards5 .card:nth-child(4),.cards5 .card:nth-child(5){grid-column:auto}
+  .why__close{margin-top:32px}
+}

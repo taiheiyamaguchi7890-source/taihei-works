@@ -170,3 +170,26 @@
   .hs__track{flex-wrap:wrap;transform:none!important}
   .progress,.float-ph,.cur{display:none!important}
 }
+
+/* ===== ギャラリー・スタッフ募集（2026-10-05 追加） ===== */
+.gnav{gap:22px}
+.gal{columns:3 260px;column-gap:20px}
+.gal__item{break-inside:avoid;margin:0 0 20px;position:relative}
+.gal__btn{display:block;width:100%;padding:0;border:0;background:var(--c-soft);border-radius:var(--r-card);overflow:hidden;cursor:zoom-in}
+.gal__btn img{display:block;width:100%;height:auto;transition:transform .9s var(--ease-out)}
+.gal__btn:hover img{transform:scale(1.04)}
+.gal__item figcaption{font-size:14px;color:var(--c-sub);margin-top:10px;padding-left:4px}
+.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:90vh}
+.lb::backdrop{background:rgba(31,40,36,.82)}
+.lb img{display:block;max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:12px}
+.lb__close{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--c-ink);font-size:24px;line-height:1;cursor:pointer}
+.perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.perk{background:var(--c-base);border-radius:var(--r-card);padding:32px 28px}
+.perk__num{font-family:Sora,sans-serif;font-weight:600;color:var(--c-accent);letter-spacing:.06em;font-size:14px}
+.perk h3{font-size:19px;margin:8px 0 12px;line-height:1.5}
+.perk p{color:var(--c-sub);font-size:15px}
+.rec-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn-soft--line{background:#fff;color:var(--c-accent-ink);box-shadow:inset 0 0 0 1.5px var(--c-accent-ink)}
+.btn-soft--line:hover{background:var(--c-soft);color:var(--c-accent-ink)}
+@media (max-width:900px){.perks{grid-template-columns:minmax(0,1fr);gap:14px}.perk{padding:24px 22px}}
+@media (max-width:600px){.gal{columns:2;column-gap:12px}.gal__item{margin-bottom:12px}.gal__item figcaption{font-size:12px;margin-top:6px}}
