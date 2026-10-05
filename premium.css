@@ -1,0 +1,195 @@
+/* プレミアムプラン用の追加演出 */
+
+/* オープニング（葉のロゴが描かれ、幕が上がる） */
+.op{display:none}
+.js .op{display:grid;place-items:center;position:fixed;inset:0;z-index:200;background:var(--c-deep);color:#fff;clip-path:inset(0 0 0 0);transition:clip-path 1s cubic-bezier(.77,0,.18,1)}
+.op.is-done{clip-path:inset(0 0 100% 0)}
+.no-op .op{display:none}
+.op__in{display:grid;justify-items:center;gap:18px}
+.op svg{width:88px;height:88px}
+.op svg path,.op svg circle{stroke-dasharray:180;stroke-dashoffset:180;animation:draw 1.2s cubic-bezier(.65,0,.35,1) forwards}
+.op svg circle{animation-delay:.1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.op p{font-size:22px;font-weight:700;letter-spacing:.3em;opacity:0;animation:opfade .8s ease .7s forwards}
+.op small{font-family:var(--f-en);font-size:12px;letter-spacing:.1em;opacity:0;animation:opfade .8s ease .9s forwards}
+@keyframes opfade{to{opacity:1}}
+
+/* 読んだ量のバー */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:120;background:var(--c-spot);transform-origin:left;transform:scaleX(0)}
+
+/* カーソル（PCのみ） */
+.cur{display:none}
+@media (hover:hover) and (pointer:fine){
+  .has-cur .cur{display:block;position:fixed;left:0;top:0;z-index:150;pointer-events:none;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;border:1.5px solid var(--c-accent);transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s var(--ease),opacity .3s;mix-blend-mode:multiply;opacity:0}
+  .has-cur .cur.is-on{opacity:1}
+  .has-cur .cur.is-link{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(47,158,120,.14)}
+  .has-cur .cur.is-view{width:96px;height:96px;margin:-48px 0 0 -48px;background:var(--c-accent);border-color:var(--c-accent);mix-blend-mode:normal}
+  .cur span{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-family:var(--f-en);font-size:13px;font-weight:600;opacity:0;transition:opacity .2s}
+  .cur.is-view span{opacity:1}
+}
+
+/* ヒーロー：1文字ずつ・写真の入れ替え・マウスで動く小写真 */
+.pm-hero h1 .ch{display:inline-block}
+.pm-hero h1 .ln{white-space:nowrap}
+.pm-hero h1{font-size:clamp(28px,3.4vw,46px)}
+.js .pm-hero h1 .ch{opacity:0;transform:translateY(.6em) rotate(8deg);filter:blur(4px)}
+.pm-hero.is-ready h1 .ch{opacity:1;transform:none;filter:none;transition:opacity .7s var(--ease-out),transform .9s cubic-bezier(.34,1.56,.64,1),filter .7s;transition-delay:calc(.25s + var(--i)*.045s)}
+.pm-hero .hero__main img{position:absolute;inset:0;opacity:0;transition:opacity 1.4s var(--ease),transform 7s linear}
+.pm-hero .hero__main img.is-on{opacity:1;transform:scale(1)}
+.pm-hero .hero__main{aspect-ratio:5/6}
+.pm-hero [data-depth]{transition:translate .6s var(--ease-out)}
+.hero__count{position:absolute;left:24px;top:24px;z-index:2;background:#fff;border-radius:999px;padding:6px 14px;font-family:var(--f-en);font-size:12px;display:flex;gap:6px;align-items:center}
+.hero__count i{width:40px;height:2px;background:var(--c-line);position:relative;overflow:hidden;border-radius:2px}
+.hero__count i::after{content:"";position:absolute;inset:0;background:var(--c-accent);transform-origin:left;animation:bar 5s linear infinite}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* 流れ続ける写真カード（natural-H-x05） */
+.strip{overflow:hidden;padding:8px 0 24px;margin-top:-48px;position:relative;z-index:1}
+.strip__track{display:flex;gap:24px;width:max-content;animation:strip 48s linear infinite}
+.strip:hover .strip__track,.strip.is-off .strip__track{animation-play-state:paused}
+.strip__card{width:240px;aspect-ratio:3/4;border-radius:24px;overflow:hidden;border:6px solid #fff;background:var(--c-soft);flex:none;transform:rotate(var(--r,0deg))}
+.strip__card img{width:100%;height:100%;object-fit:cover}
+@keyframes strip{to{transform:translateX(-50%)}}
+
+/* お品書き：カーソルに写真がついてくる（PC） */
+.hover-menu{list-style:none;margin:0;padding:0;border-top:1px solid var(--c-line)}
+.hover-menu a{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:28px;align-items:center;padding:28px 8px;border-bottom:1px solid var(--c-line);text-decoration:none;transition:padding .4s var(--ease),background .4s var(--ease)}
+.hover-menu a:hover{padding-left:24px;background:#fff}
+.hover-menu .ic{width:56px;height:56px;border-radius:50%;background:var(--c-soft);color:var(--c-accent-ink);display:grid;place-items:center}
+.hover-menu .ic svg{width:26px;height:26px}
+.hover-menu .nm{font-size:clamp(22px,2.6vw,32px);font-weight:700;letter-spacing:.06em}
+.hover-menu .nm small{display:block;font-size:14px;font-weight:500;color:var(--c-sub);letter-spacing:.05em}
+.hover-menu .pr{font-family:var(--f-en);font-size:24px;font-weight:600;color:var(--c-accent-ink)}
+.hover-menu .go{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--c-ink);display:grid;place-items:center;transition:background .3s,color .3s,transform .4s var(--ease)}
+.hover-menu .go svg{width:16px;height:16px}
+.hover-menu a:hover .go{background:var(--c-ink);color:#fff;transform:rotate(-45deg)}
+.hover-menu .th{display:none}
+.float-ph{position:fixed;left:0;top:0;z-index:30;width:280px;aspect-ratio:4/3;border-radius:24px;overflow:hidden;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-6deg);transition:opacity .35s var(--ease),transform .5s cubic-bezier(.34,1.56,.64,1)}
+.float-ph.is-on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}
+.float-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
+.float-ph img.is-on{opacity:1}
+
+/* 横にスクロールする「ごはんができるまで」（PC） */
+.hs{position:relative;background:var(--c-deep);color:#fff}
+.hs__pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.hs__head{padding:0 max(24px,calc((100vw - 1200px)/2));margin-bottom:40px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hs__head h2{font-size:clamp(26px,3vw,36px);letter-spacing:.06em}
+.hs__head .en{color:var(--c-spot);font-size:13px;display:block;margin-top:4px}
+.hs__bar{width:200px;height:3px;background:rgba(255,255,255,.2);border-radius:3px;overflow:hidden}
+.hs__bar i{display:block;height:100%;background:var(--c-spot);transform-origin:left;transform:scaleX(0)}
+.hs__track{display:flex;gap:32px;padding:0 max(24px,calc((100vw - 1200px)/2));will-change:transform}
+.hs__panel{flex:none;width:min(560px,70vw);display:grid;grid-template-rows:auto auto;gap:20px}
+.hs__ph{border-radius:24px;overflow:hidden;aspect-ratio:16/10;background:rgba(255,255,255,.08)}
+.hs__ph img{width:100%;height:100%;object-fit:cover}
+.hs__time{font-family:var(--f-en);font-size:14px;color:var(--c-spot)}
+.hs__panel h3{font-size:22px;margin:2px 0 8px}
+.hs__panel p{font-size:15px;opacity:.85}
+
+/* 数字が増える */
+.nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.num{background:#fff;border-radius:var(--r-card);padding:36px 28px;text-align:center}
+.num b{display:block;font-family:var(--f-en);font-weight:600;font-size:clamp(48px,6vw,72px);color:var(--c-accent-ink);line-height:1.1}
+.num b small{font-size:.4em;margin-left:4px}
+.num>span{font-size:14px;color:var(--c-sub)}
+
+/* ストーリーへの入口 */
+.teaser{position:relative;border-radius:var(--r-big);overflow:hidden;min-height:440px;display:grid;align-items:end;color:#fff;text-decoration:none}
+.teaser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.4s var(--ease-out)}
+.teaser::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,94,74,0) 30%,rgba(31,94,74,.85));z-index:1}
+.teaser:hover img{transform:scale(1.08)}
+.teaser__b{position:relative;z-index:2;padding:48px}
+.teaser__b .en{color:var(--c-spot);font-size:14px}
+.teaser__b h2{font-size:clamp(26px,3.4vw,40px);margin:4px 0 12px}
+.teaser__go{display:inline-flex;align-items:center;gap:12px;font-weight:700}
+.teaser__go i{width:48px;height:48px;border-radius:50%;background:#fff;color:var(--c-deep);display:grid;place-items:center}
+.teaser__go svg{width:16px;height:16px}
+
+/* PC：カードの立体的な傾き */
+@media (hover:hover) and (pointer:fine){
+  .tilt{transform-style:preserve-3d;transition:transform .5s var(--ease-out)}
+}
+
+/* ストーリーページ：左の写真を固定、右の章だけ流れる（natural-H-x04） */
+.story-x{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--c-card)}
+.story-x__fix{position:sticky;top:0;height:100vh;overflow:hidden}
+.story-x__fix img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.2s var(--ease),transform 3s var(--ease-out)}
+.story-x__fix img.is-on{opacity:1;transform:scale(1)}
+.story-x__fix .wave{position:absolute;right:-1px;top:0;width:56px;height:100%;color:var(--c-card)}
+.story-x__label{position:absolute;left:32px;bottom:32px;z-index:2;background:#fff;border-radius:999px;padding:8px 18px;font-family:var(--f-en);font-size:13px}
+.story-x__flow{padding:20vh clamp(24px,5vw,80px) 20vh}
+.chap{min-height:80vh;display:flex;flex-direction:column;justify-content:center;max-width:30em}
+.chap .en{color:var(--c-accent-ink);font-size:14px}
+.chap h2{font-size:clamp(26px,3vw,36px);margin:6px 0 20px;letter-spacing:.06em}
+.chap p+p{margin-top:1.2em}
+.chap__ph{display:none}
+.quote{text-align:center;max-width:820px;margin:0 auto;position:relative}
+.quote p{font-size:clamp(22px,2.8vw,34px);font-weight:700;line-height:1.8;letter-spacing:.08em}
+.quote small{display:block;margin-top:24px;color:var(--c-sub);font-size:14px}
+.quote .doodle--spark{left:auto;right:-10px;top:-30px}
+.timeline{list-style:none;margin:0 auto;padding:0;max-width:820px;position:relative}
+.timeline::before{content:"";position:absolute;left:23px;top:8px;bottom:8px;width:2px;background:var(--c-line)}
+.timeline li{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:24px;padding:20px 0}
+.timeline li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--c-accent);border:4px solid var(--c-soft);margin:6px 0 0 16px}
+.timeline b{display:block;font-size:18px}
+.timeline span{font-size:14px;color:var(--c-sub)}
+
+@media (max-width:1023px){
+  .hs__pin{position:relative;height:auto;padding:88px 0}
+  .hs__track{flex-direction:column;transform:none!important;padding:0 24px}
+  .hs__panel{width:100%}
+  .hs__bar{display:none}
+  .hs{height:auto!important}
+  .story-x{grid-template-columns:minmax(0,1fr)}
+  .story-x__fix{display:none}
+  .story-x__flow{padding:24px 24px 48px}
+  .chap{min-height:0;padding:40px 0;border-bottom:1px dashed var(--c-line)}
+  .chap__ph{display:block;border-radius:24px;overflow:hidden;aspect-ratio:4/3;margin-bottom:24px;background:var(--c-soft)}
+  .chap__ph img{width:100%;height:100%;object-fit:cover}
+}
+@media (max-width:767px){
+  .strip{margin-top:-24px}
+  .strip__card{width:150px;border-radius:18px;border-width:4px}
+  .hover-menu a{grid-template-columns:72px minmax(0,1fr) auto;gap:16px;padding:18px 4px}
+  .hover-menu .ic,.hover-menu .go{display:none}
+  .hover-menu .th{display:block;width:72px;height:72px;border-radius:16px;overflow:hidden}
+  .hover-menu .th img{width:100%;height:100%;object-fit:cover}
+  .hover-menu .pr{font-size:18px}
+  .hover-menu .nm{font-size:19px}
+  .hover-menu a:hover{padding-left:4px}
+  .nums{grid-template-columns:minmax(0,1fr);gap:12px}
+  .num{display:flex;align-items:baseline;justify-content:center;gap:12px;padding:20px}
+  .teaser{min-height:360px;border-radius:32px}
+  .teaser__b{padding:28px 24px}
+  .hero__count{left:12px;top:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .op{display:none}
+  .js .pm-hero h1 .ch{opacity:1!important;transform:none!important;filter:none!important}
+  .strip__track{animation:none!important}
+  .hs__pin{position:relative;height:auto;padding:88px 0}
+  .hs__track{flex-wrap:wrap;transform:none!important}
+  .progress,.float-ph,.cur{display:none!important}
+}
+
+/* ===== ギャラリー・スタッフ募集（2026-10-05 追加） ===== */
+.gnav{gap:22px}
+.gal{columns:3 260px;column-gap:20px}
+.gal__item{break-inside:avoid;margin:0 0 20px;position:relative}
+.gal__btn{display:block;width:100%;padding:0;border:0;background:var(--c-soft);border-radius:var(--r-card);overflow:hidden;cursor:zoom-in}
+.gal__btn img{display:block;width:100%;height:auto;transition:transform .9s var(--ease-out)}
+.gal__btn:hover img{transform:scale(1.04)}
+.gal__item figcaption{font-size:14px;color:var(--c-sub);margin-top:10px;padding-left:4px}
+.lb{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);max-height:90vh}
+.lb::backdrop{background:rgba(31,40,36,.82)}
+.lb img{display:block;max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:12px}
+.lb__close{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--c-ink);font-size:24px;line-height:1;cursor:pointer}
+.perks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.perk{background:var(--c-base);border-radius:var(--r-card);padding:32px 28px}
+.perk__num{font-family:Sora,sans-serif;font-weight:600;color:var(--c-accent);letter-spacing:.06em;font-size:14px}
+.perk h3{font-size:19px;margin:8px 0 12px;line-height:1.5}
+.perk p{color:var(--c-sub);font-size:15px}
+.rec-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn-soft--line{background:#fff;color:var(--c-accent-ink);box-shadow:inset 0 0 0 1.5px var(--c-accent-ink)}
+.btn-soft--line:hover{background:var(--c-soft);color:var(--c-accent-ink)}
+@media (max-width:900px){.perks{grid-template-columns:minmax(0,1fr);gap:14px}.perk{padding:24px 22px}}
+@media (max-width:600px){.gal{columns:2;column-gap:12px}.gal__item{margin-bottom:12px}.gal__item figcaption{font-size:12px;margin-top:6px}}
