@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="css/style.css?v=20261013b">
+<link rel="stylesheet" href="css/style.css?v=20261013c">
 </head>
 <body>
 
@@ -516,6 +516,8 @@
   var past=false,inCt=false;
   function upd(){fab.classList.toggle('is-on',past&&!inCt)}
   window.addEventListener('scroll',function(){var p=window.scrollY>window.innerHeight*.6;if(p!==past){past=p;upd()}},{passive:true});
+  var mb=document.querySelector('.menubtn');
+  if(mb&&'MutationObserver' in window){new MutationObserver(function(){document.body.classList.toggle('is-menu',mb.getAttribute('aria-expanded')==='true')}).observe(mb,{attributes:true,attributeFilter:['aria-expanded']})}
   if(ct&&'IntersectionObserver' in window){new IntersectionObserver(function(es){inCt=es[0].isIntersecting;upd()},{rootMargin:'0px 0px -30% 0px'}).observe(ct)}
 })();
 </script>
