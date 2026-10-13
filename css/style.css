@@ -45,6 +45,14 @@ p,h1,h2,h3,li,figcaption,small,span{word-break:auto-phrase;text-wrap:pretty}
 .btn--sm{height:48px;padding-left:22px;font-size:14px}
 .btn--sm .btn__ic{width:34px;height:34px}
 .btn--big{height:64px;padding-left:36px}
+/* LINEへ飛ぶボタン（ヘッダー・スマホメニュー） */
+.btn--line{background:#06c755;padding-left:18px;gap:10px}
+.btn--line:hover{background:#05a748}
+.btn--line .btn__ic{color:#06a548}
+.btn__line{width:22px;height:22px;fill:#fff;flex:none}
+.btn--sm.btn--line{padding-left:16px}
+.btn--sm .btn__line{width:20px;height:20px}
+@media (min-width:1024px) and (max-width:1180px){.hd__cta.btn--line{letter-spacing:.02em;padding-left:18px}.hd__cta .btn__line{display:none}}
 
 /* ---------- headings ---------- */
 .st{margin-bottom:64px}
