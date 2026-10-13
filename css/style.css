@@ -571,7 +571,28 @@ html.js .qa.is-open .qa__a{grid-template-rows:1fr}
 .fld input,.fld textarea{font:inherit;font-weight:500;font-size:16px;border:2px solid transparent;border-radius:16px;background:#fff;padding:14px 18px;outline:0;transition:border-color .3s,box-shadow .3s;color:var(--c-text);resize:vertical}
 .fld input:focus,.fld textarea:focus{border-color:var(--c-accent);box-shadow:0 0 0 5px var(--c-accent-soft)}
 .form .btn{align-self:center;margin-top:8px}
+/* LINE（いちばん気軽な窓口として、LINEの緑・横長で先頭に置く） */
+.way--line{grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;background:#06c755;color:#fff;border-color:#06c755;padding:26px 28px}
+.way--line:hover{background:#05b84e;color:#fff;transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.way--line .way__ic,.way--line:hover .way__ic{background:#fff;color:#06c755;width:56px;height:56px;padding:11px;border-radius:16px;margin:0;flex:none}
+.way__body{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.way--line .way__en,.way--line:hover .way__en{color:#fff;display:flex;align-items:center;gap:10px}
+.way__tag{font-style:normal;font-family:var(--font-jp);font-size:11px;font-weight:700;letter-spacing:.04em;background:var(--c-spot);color:var(--c-text);border-radius:var(--r-pill);padding:2px 10px}
+.way--line .way__v{font-size:20px}
+.way--line .way__s{opacity:1;color:#fff}
+.way__go{flex:none;display:inline-flex;align-items:center;gap:8px;background:#fff;color:#06a548;font-weight:700;font-size:15px;border-radius:var(--r-pill);padding:14px 22px;transition:transform .3s}
+.way__go svg{width:18px;height:18px}
+.way--line:hover .way__go{transform:translateX(4px)}
 @media (max-width:1023px){.ways{grid-template-columns:minmax(0,1fr)}.cta{padding:64px 32px 40px}}
+@media (max-width:767px){.way--line{flex-direction:column;align-items:stretch;gap:14px;padding:24px 20px 20px}.way--line .way__ic{width:48px;height:48px;padding:9px}.way--line .way__v{font-size:18px}.way__go{justify-content:center;padding:13px 20px}}
+
+/* スマホ・タブレットの固定LINEボタン */
+.linefab{display:none}
+@media (max-width:1023px){
+  .linefab{position:fixed;left:14px;bottom:14px;z-index:80;display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 20px 0 16px;border-radius:var(--r-pill);background:#06c755;color:#fff;font-weight:700;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.18);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .5s,transform .7s var(--ease)}
+  .linefab svg{width:22px;height:22px;fill:#fff}
+  .linefab.is-on{opacity:1;transform:none;pointer-events:auto}
+}
 @media (max-width:767px){.way__v{font-size:14px}.cta{padding:52px 20px 24px;border-radius:32px}.form{padding:32px 20px;border-radius:32px;margin-top:40px}}
 
 /* ---------- FOOTER ---------- */
