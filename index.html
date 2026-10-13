@@ -404,7 +404,7 @@
         <path class="road__v" pathLength="1" d="M0 32 H125 C 250 32 250 152 375 152 C 500 152 500 32 625 32 C 750 32 750 152 875 152 H1000"/>
       </svg>
       <ol class="road__steps">
-        <li class="step"><span class="step__dot">1</span><h3>ご連絡・サンプル確認</h3><p>DM・メール・下のフォームからお問い合わせください。まずは無料でサンプルサイトをおつくりし、ご覧いただきます。気に入っていただけたらそのままご依頼いただけます。</p></li>
+        <li class="step"><span class="step__dot">1</span><h3>ご連絡・サンプル確認</h3><p>LINE・DM・メール・下のフォームからお問い合わせください。まずは無料でサンプルサイトをおつくりし、ご覧いただきます。気に入っていただけたらそのままご依頼いただけます。</p></li>
         <li class="step"><span class="step__dot">2</span><h3>お写真・情報のご提供</h3><p>メニュー・営業時間・お店や現場のお写真などをお送りいただきます。LINE・DM・メールでOKです。</p></li>
         <li class="step"><span class="step__dot">3</span><h3>制作・確認・修正</h3><p>サンプルをもとに本番サイトを仕上げます。修正は何度でもご対応します。</p></li>
         <li class="step"><span class="step__dot">4</span><h3>公開・完成</h3><p>ご承認後に公開します。更新をまかせたい場合は、月額の更新サポートで対応します。</p></li>
@@ -461,9 +461,14 @@
       <h2 class="cta__h">まずは、お気軽に<br>ご相談ください</h2>
       <p class="cta__lead">ご相談・サンプル制作は無料です。ご都合のよい方法でご連絡ください。</p>
       <div class="ways">
-        <a class="way" href="https://www.instagram.com/taihei.yamaguchi789/" target="_blank" rel="noopener">
+        <a class="way way--line" href="https://lin.ee/rZupack" target="_blank" rel="noopener">
+          <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/><path d="M8.5 9.5v3h1.6M12 9.5v3M14 12.5v-3l2 3v-3"/></svg>
+          <span class="way__body"><span class="way__en">LINE<em class="way__tag">いちばん気軽</em></span><span class="way__v">LINEで相談する</span><span class="way__s">友だち追加して、そのままトークでご相談ください。ひと言からでも大丈夫です。</span></span>
+          <span class="way__go" aria-hidden="true">友だち追加<svg><use href="#arw"/></svg></span>
+        </a>
+        <a class="way" href="https://www.instagram.com/harukaze_works/" target="_blank" rel="noopener">
           <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          <span class="way__en">Instagram</span><span class="way__v">@taihei.yamaguchi789</span><span class="way__s">にDMを送る</span>
+          <span class="way__en">Instagram</span><span class="way__v">@harukaze_works</span><span class="way__s">にDMを送る</span>
         </a>
         <a class="way" href="mailto:taiheiyamaguchi7890@gmail.com">
           <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
@@ -498,6 +503,22 @@
 </footer>
 
 <a class="totop" href="#top" aria-label="ページの先頭へ"><svg><use href="#arw"/></svg></a>
+
+<!-- スマホ・タブレットだけ表示：LINE相談ボタン（お問い合わせ欄が見えている間は隠す） -->
+<a class="linefab" href="https://lin.ee/rZupack" target="_blank" rel="noopener" aria-label="LINEで相談する（友だち追加）">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg>
+  <span>LINEで相談</span>
+</a>
+<script>
+(function(){
+  var fab=document.querySelector('.linefab'),ct=document.getElementById('contact');
+  if(!fab)return;
+  var past=false,inCt=false;
+  function upd(){fab.classList.toggle('is-on',past&&!inCt)}
+  window.addEventListener('scroll',function(){var p=window.scrollY>window.innerHeight*.6;if(p!==past){past=p;upd()}},{passive:true});
+  if(ct&&'IntersectionObserver' in window){new IntersectionObserver(function(es){inCt=es[0].isIntersecting;upd()},{rootMargin:'0px 0px -30% 0px'}).observe(ct)}
+})();
+</script>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="arw" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
