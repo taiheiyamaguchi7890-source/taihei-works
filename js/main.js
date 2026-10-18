@@ -36,10 +36,11 @@
   }
 
   /* ---------- 見出しを1文字ずつに分ける（読み上げは元の文のまま） ---------- */
-  var n = 0;
+  var n = 0, h1el = $('.hero__h1');
+  if (h1el) h1el.setAttribute('aria-label', h1el.textContent.replace(/\s+/g, ''));
   $$('.hero__h1 .chars').forEach(function (el) {
     var t = el.textContent, h = '';
-    for (var i = 0; i < t.length; i++) { h += '<span class="c" style="--n:' + (n++) + '">' + t[i] + '</span>'; }
+    for (var i = 0; i < t.length; i++) { h += '<span class="c" style="--n:' + (n++) + '" aria-hidden="true">' + t[i] + '</span>'; }
     el.innerHTML = h;
   });
 
@@ -53,10 +54,11 @@
     try { sessionStorage.setItem('hw-b-op', '1'); } catch (e) {}
     var op = d.createElement('div'); op.className = 'op'; op.setAttribute('aria-hidden', 'true');
     op.innerHTML = '<svg viewBox="0 0 1440 800" preserveAspectRatio="none"><path pathLength="1" d="M-20 500 C 300 380, 520 620, 820 480 S 1200 360, 1460 430"/><path pathLength="1" d="M-20 560 C 320 480, 560 660, 860 540 S 1240 440, 1460 500"/><path pathLength="1" d="M-20 300 C 260 240, 480 380, 760 300 S 1160 200, 1460 260"/></svg>' +
-      '<p class="op__logo"><img src="images/logo_full_web.png" alt=""></p>';
+      '<p class="op__logo"><img src="' + (function () { var l = $('.logo img'); return l ? l.getAttribute('src').replace('logo.png', 'logo_full_web.png') : 'images/logo_full_web.png'; })() + '" alt=""></p>';
     body.appendChild(op);
-    setTimeout(function () { op.classList.add('is-out'); ready(); }, 1500);
-    setTimeout(function () { op.remove(); }, 2500);
+    /* v1.6：線 2.2秒 → ロゴ 0.6秒から 1.5秒 → 2.2秒から幕が上へ 1.5秒で抜ける（タブごとに1回） */
+    setTimeout(function () { op.classList.add('is-out'); ready(); }, 2200);
+    setTimeout(function () { op.remove(); }, 3900);
   }
   setTimeout(ready, 3000);
   pauseOff(hero);
@@ -107,7 +109,7 @@
   /* ---------- 写真の重ね替え ---------- */
   if (!reduce) {
     var cycles = $$('.hero [data-cycle]'), k = 0;
-    viewTimer(hero, 4600, function () {
+    viewTimer(hero, 6900, function () {
       k++;
       cycles.forEach(function (v) {
         var ims = $$('.cyc', v); if (ims.length < 2) return;
@@ -290,4 +292,161 @@
       cur.classList.toggle('is-view', !!v); cur.classList.toggle('is-link', !!l && !v);
     });
   });
+})();
+
+/* =====================================================================
+   2026-10-18 改修で足した動き
+   ・ヒーローの④奥行き／第一印象チェック（タブ・自動送り・検索窓に文字）
+   ・mo-E-06 灰色の文が1行ずつ濃く／mo-A-07 流れる文字の帯（止めるボタン）
+   ・mo-U-05 文字が流れる問い合わせボタン／フォームを開くリンク
+   ・計測：LINE・電話・メール・Instagram・フォーム送信のクリック（GA4 があれば gtag、なければ dataLayer）
+   ===================================================================== */
+(function () {
+  'use strict';
+  var d = document, w = window;
+  var reduce = w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hasIO = 'IntersectionObserver' in w;
+  var $ = function (s, r) { return (r || d).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); };
+  var clamp = function (v) { return Math.max(0, Math.min(1, v)); };
+  function watch(el, cb, opt) { if (!el) return; if (!hasIO) { cb(true); return; } new IntersectionObserver(function (es) { cb(es[0].isIntersecting); }, opt || { threshold: 0 }).observe(el); }
+
+  /* ---------- 計測 ---------- */
+  function track(name, params) {
+    try {
+      if (typeof w.gtag === 'function') w.gtag('event', name, params);
+      else { w.dataLayer = w.dataLayer || []; var o = { event: name }; for (var k in params) o[k] = params[k]; w.dataLayer.push(o); }
+    } catch (e) {}
+  }
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-track]'); if (!a) return;
+    var m = a.getAttribute('data-track');
+    track(m + '_click', { cta_position: a.getAttribute('data-pos') || '', page_path: location.pathname });
+  });
+  $$('form[data-track-form]').forEach(function (f) { f.addEventListener('submit', function () { track('form_submit', { cta_position: 'contact', page_path: location.pathname }); }); });
+
+  /* ---------- フォームを開くリンク ---------- */
+  $$('[data-form-open]').forEach(function (a) { a.addEventListener('click', function () { var f = $('#form'); if (f) f.open = true; track('form_open', { cta_position: 'contact', page_path: location.pathname }); }); });
+
+  /* ---------- ヒーロー：④スクロールの奥行き ---------- */
+  var hero = $('.hero'), hc = hero && $('.hero__copy', hero), hv = hero && $('.hero__vis', hero);
+  if (hero && !reduce) {
+    var tk = false;
+    var depth = function () {
+      tk = false;
+      var r = hero.getBoundingClientRect(); if (r.bottom < 0) return;
+      var p = clamp(-r.top / (r.height || 1));
+      if (hc) { hc.style.transform = 'translateY(' + (-p * 60).toFixed(1) + 'px)'; hc.style.opacity = String(Math.max(0.05, 1 - p * 1.1)); }
+      if (hv) hv.style.transform = 'translateY(' + (p * 90).toFixed(1) + 'px)';
+    };
+    w.addEventListener('scroll', function () { if (!tk) { tk = true; requestAnimationFrame(depth); } }, { passive: true });
+  }
+
+  /* ---------- 第一印象チェック ---------- */
+  var chk = $('.chk');
+  if (chk) {
+    var rows = $$('.chk__row', chk), scr = $$('.cd', chk), cur = 0, timer = null, vis = false, MS = 7800, typing = null;
+    var qEl = $('.cd__q', chk), qTxt = qEl ? qEl.getAttribute('data-q') : '';
+    chk.style.setProperty('--chk-ms', MS + 'ms');
+    function typeQ() {
+      if (!qEl || reduce) return;
+      clearInterval(typing); var i = 0; qEl.textContent = '';
+      typing = setInterval(function () { i++; qEl.textContent = qTxt.slice(0, i); if (i >= qTxt.length) clearInterval(typing); }, 160);
+    }
+    function show(k, auto) {
+      cur = k;
+      rows.forEach(function (r, i) {
+        r.classList.toggle('is-cur', i === k); r.classList.toggle('is-done', i < k);
+        r.setAttribute('aria-selected', i === k ? 'true' : 'false'); r.tabIndex = i === k ? 0 : -1;
+        r.classList.remove('is-run');
+      });
+      scr.forEach(function (s, i) { s.classList.toggle('is-on', i === k); });
+      if (k === 0) typeQ();
+      /* 進み線のアニメーションをやり直す */
+      var rr = rows[k]; if (rr) { rr.style.animation = 'none'; void rr.offsetWidth; rr.style.animation = ''; }
+    }
+    function stop() { clearInterval(timer); timer = null; }
+    function start() { if (reduce || timer || !vis || d.hidden) return; chk.classList.add('is-auto'); timer = setInterval(function () { show((cur + 1) % rows.length, true); }, MS); }
+    rows.forEach(function (r, i) {
+      r.addEventListener('click', function () { stop(); show(i); start(); });
+      r.addEventListener('keydown', function (e) {
+        var k = null;
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') k = (cur + 1) % rows.length;
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') k = (cur - 1 + rows.length) % rows.length;
+        if (k !== null) { e.preventDefault(); stop(); show(k); rows[k].focus(); start(); }
+      });
+    });
+    show(0);
+    watch(chk, function (v) { vis = v; chk.classList.toggle('is-off', !v); if (v) { show(cur); start(); } else stop(); });
+    d.addEventListener('visibilitychange', function () { d.hidden ? stop() : start(); });
+  }
+
+  /* ---------- mo-E-06：灰色の文が1行ずつ濃くなる ---------- */
+  var e6 = $('[data-e6]');
+  if (e6 && !reduce) {
+    var ls = $$('.e6__l', e6), t6 = false, on6 = !hasIO;
+    var f6 = function () {
+      t6 = false; if (!on6) return;
+      var vh = w.innerHeight;
+      ls.forEach(function (l) {
+        var r = l.getBoundingClientRect(), c = r.top + r.height / 2;
+        var p = clamp((vh * 0.85 - c) / (vh * 0.35));
+        l.style.setProperty('--p', p.toFixed(3));
+      });
+    };
+    watch(e6, function (v) { on6 = v; if (v) f6(); }, { threshold: 0, rootMargin: '20% 0px 20% 0px' });
+    w.addEventListener('scroll', function () { if (!t6) { t6 = true; requestAnimationFrame(f6); } }, { passive: true });
+    f6();
+  }
+
+  /* ---------- mo-A-07：流れる文字の帯 ---------- */
+  var mq = $('[data-mq]'), mqb = $('[data-mq-pause]');
+  if (mq) {
+    watch(mq, function (v) { mq.classList.toggle('is-off', !v || d.hidden); });
+    if (mqb) mqb.addEventListener('click', function () {
+      var p = mqb.getAttribute('aria-pressed') !== 'true';
+      mqb.setAttribute('aria-pressed', p ? 'true' : 'false'); mqb.textContent = p ? '流れる文字を動かす' : '流れる文字を止める';
+      mq.classList.toggle('is-paused', p);
+    });
+  }
+
+  /* ---------- mo-U-05：文字が流れる問い合わせボタン ---------- */
+  var u5 = $('.u5'), ct = $('#contact');
+  if (u5) {
+    var past = false, inCt = false;
+    var upd = function () { u5.classList.toggle('is-on', past && !inCt); };
+    var sc = function () { var p = w.scrollY > w.innerHeight * 0.6; if (p !== past) { past = p; upd(); } };
+    w.addEventListener('scroll', sc, { passive: true }); sc();
+    if (ct) watch(ct, function (v) { inCt = v; upd(); }, { threshold: 0, rootMargin: '0px 0px -30% 0px' });
+    d.addEventListener('visibilitychange', function () { u5.classList.toggle('is-off', d.hidden); });
+    var mb = $('.menubtn');
+    if (mb && 'MutationObserver' in w) new MutationObserver(function () { d.body.classList.toggle('is-menu', mb.getAttribute('aria-expanded') === 'true'); }).observe(mb, { attributes: true, attributeFilter: ['aria-expanded'] });
+  }
+})();
+
+/* ===== 工務店ページ：見られる3点（mo-S-05）・ヒーローの検索窓 ===== */
+(function () {
+  'use strict';
+  var d = document, w = window;
+  var reduce = w.matchMedia && w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (s, r) { return (r || d).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || d).querySelectorAll(s)); };
+  var img = $('.k3__img'), blks = $$('[data-k3]');
+  if (img && blks.length && 'IntersectionObserver' in w) {
+    var setK = function (b) {
+      blks.forEach(function (x) { x.classList.toggle('is-cur', x === b); });
+      img.style.objectPosition = '50% ' + b.getAttribute('data-k3') + '%';
+    };
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) setK(e.target); }); }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    blks.forEach(function (b) { io.observe(b); });
+  }
+  /* 検索窓に文字が打たれる（mo-I-02） */
+  var q = $('.khv__q'), res = $('.khv__res');
+  if (q && !reduce) {
+    var txt = q.getAttribute('data-q'), i = 0;
+    q.textContent = ''; if (res) res.classList.add('is-wait');
+    setTimeout(function () {
+      var id = setInterval(function () { i++; q.textContent = txt.slice(0, i); if (i >= txt.length) { clearInterval(id); setTimeout(function () { if (res) res.classList.remove('is-wait'); }, 530); } }, 160);
+    }, 2600);
+  }
 })();
