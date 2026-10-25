@@ -10,6 +10,7 @@
   var isPC = function () { return w.innerWidth >= 1024; };
 
   function onView(el, fn, margin) {
+    if (!el) return;
     if (!hasIO) { fn(el); return; }
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); fn(e.target); } });
@@ -17,6 +18,7 @@
     io.observe(el);
   }
   function watchVis(el, cb) {
+    if (!el) return;
     if (!hasIO) { cb(true); return; }
     new IntersectionObserver(function (es) { cb(es[0].isIntersecting); }, { threshold: 0 }).observe(el);
   }
@@ -46,10 +48,10 @@
 
   /* ---------- オープニング（タブごとに1回） ---------- */
   var hero = $('.hero');
-  function ready() { hero.classList.add('is-ready'); }
+  function ready() { if (hero) hero.classList.add('is-ready'); }
   var seen = false;
   try { seen = sessionStorage.getItem('hw-b-op') === '1'; } catch (e) {}
-  if (reduce || seen) ready();
+  if (!hero || reduce || seen) ready();
   else {
     try { sessionStorage.setItem('hw-b-op', '1'); } catch (e) {}
     var op = d.createElement('div'); op.className = 'op'; op.setAttribute('aria-hidden', 'true');
