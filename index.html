@@ -16,9 +16,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<!-- GA4：測定ID（G-XXXXXXXXXX）が決まったら、ここに Google タグを貼る（手順は「GA4設定メモ.txt」） -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4KQBRTQCSQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4KQBRTQCSQ');
+</script>
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="css/style.css?v=20261018">
+<link rel="stylesheet" href="css/style.css?v=20261025">
 </head>
 <body>
 
@@ -695,6 +702,7 @@
         <label class="fld"><span>お名前・お店/会社名</span><input type="text" name="name" required autocomplete="name"></label>
         <label class="fld"><span>メールアドレス</span><input type="email" name="email" required autocomplete="email"></label>
         <label class="fld"><span>ご相談内容</span><textarea name="message" rows="5" required></textarea></label>
+        <p class="form__note">送信いただいた内容は、ご相談への回答とサンプル制作のご案内に使います。くわしくは<a href="privacy/">プライバシーポリシー</a>をご覧ください。</p>
         <button class="btn btn--big mag" type="submit"><span>送信する</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></button>
       </form>
     </details>
@@ -707,7 +715,7 @@
   <div class="wrap ft__in">
     <a class="logo" href="#top"><img src="images/logo_full_web.png" alt="Harukaze Works WEB DESIGN STUDIO" width="775" height="180" loading="lazy"></a>
     <p class="ft__desc">小さなお店・会社のホームページ制作</p>
-    <nav class="ft__nav" aria-label="フッターメニュー"><a href="#worry">お困りごと</a><a href="#check">第一印象チェック</a><a href="#industry">業種別のご案内</a><a href="koumuten/">工務店・リフォームの方へ</a><a href="#works">制作実績</a><a href="#price">料金</a><a href="#promise">安心の約束</a><a href="#flow">流れ</a><a href="#faq">よくある質問</a><a href="#about">制作者</a><a href="#contact">お問い合わせ</a></nav>
+    <nav class="ft__nav" aria-label="フッターメニュー"><a href="#worry">お困りごと</a><a href="#check">第一印象チェック</a><a href="#industry">業種別のご案内</a><a href="koumuten/">工務店・リフォームの方へ</a><a href="#works">制作実績</a><a href="#price">料金</a><a href="#promise">安心の約束</a><a href="#flow">流れ</a><a href="#faq">よくある質問</a><a href="#about">制作者</a><a href="#contact">お問い合わせ</a><a href="privacy/">プライバシーポリシー</a></nav>
     <p class="ft__copy">© 2026 Harukaze Works　harukaze-works.com</p>
   </div>
 </footer>
@@ -724,6 +732,6 @@
   <symbol id="arw" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="leaf" viewBox="0 0 40 40"><g transform="translate(20 20)" fill="currentColor"><ellipse cy="-10" rx="6" ry="9"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(72)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(144)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(216)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(288)"/></g><circle cx="20" cy="20" r="4" fill="#f7f5f0"/></symbol>
 </svg>
-<script src="js/main.js?v=20261018"></script>
+<script src="js/main.js?v=20261025"></script>
 </body>
 </html>
