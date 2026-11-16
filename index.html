@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Harukaze Works｜見つかる。選ばれる。また来てもらえる。小さなお店・会社のホームページと集客</title>
-<meta name="description" content="ホームページをまんなかに、Googleマップ・LINEまで。お客さんがお店にたどり着く道すじを、小さなお店・会社といっしょに整えます。第一印象チェックとサンプル制作は無料。">
-<meta property="og:title" content="Harukaze Works｜見つかる。選ばれる。また来てもらえる。">
-<meta property="og:description" content="ホームページをまんなかに、お客さんがお店にたどり着く道すじを、いっしょに整えます。第一印象チェックとサンプル制作は無料です。">
+<title>Harukaze Works｜小さなお店に、身近なウェブ担当を。</title>
+<meta name="description" content="中小企業の事業計画書を150本以上書いてきた経験で、お店や会社の「選ばれる理由」を言葉にして、ホームページにします。ホームページ・Googleマップ・LINE公式の立ち上げと運用。サンプル制作は無料です。">
+<meta property="og:title" content="Harukaze Works｜小さなお店に、身近なウェブ担当を。">
+<meta property="og:description" content="お店や会社の「選ばれる理由」を言葉にして、ホームページにします。サンプル制作は無料です。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harukaze-works.com/">
 <meta property="og:image" content="https://harukaze-works.com/images/ogp.jpg">
-<meta name="theme-color" content="#f7f5f0">
-<link rel="icon" href="images/favicon.png" type="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<!-- 本番のドメインで開いたときだけ計測する（確認用の表示が数字に混ざらないように） -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/v3.css?v=20261116">
 <script>
   if (location.hostname === 'harukaze-works.com' || location.hostname === 'www.harukaze-works.com') {
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4KQBRTQCSQ'; document.head.appendChild(s);
@@ -28,826 +27,414 @@
   }
 </script>
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="css/style.css?v=20261027">
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 
-<!-- ============ HEADER（浮かぶピル） ============ -->
+<!-- ===== ヘッダー ===== -->
 <header class="hd" id="hd">
-  <a class="logo" href="#top"><img src="images/logo.png" alt="Harukaze Works" width="734" height="120" onerror="this.outerHTML='<span class=logo__txt>Harukaze Works</span>'"></a>
-  <nav class="pill" aria-label="メインメニュー">
-    <span class="pill__ind" aria-hidden="true"></span>
-    <a href="#worry">お困りごと</a>
-    <a href="#journey">集客の道すじ</a>
-    <a href="#pillars">3本柱</a>
-    <a href="#works">実績</a>
+  <a class="hd__logo" href="./" aria-label="Harukaze Works トップへ"><img src="images/logo.png" width="734" height="120" alt="Harukaze Works"></a>
+  <nav class="hd__nav" aria-label="メインメニュー">
+    <a href="#service">サービス</a>
+    <a href="#flow">進め方</a>
     <a href="#price">料金</a>
-    <a href="#promise">安心の約束</a>
+    <a href="#works">制作事例</a>
+    <a href="#about">Harukaze Works について</a>
   </nav>
-  <a class="btn btn--sm btn--line hd__cta mag" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="header"><svg class="btn__line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg><span>LINEで無料サンプル依頼</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-  <button class="menubtn" type="button" aria-expanded="false" aria-controls="spnav"><span></span><span></span><span></span><em>メニュー</em></button>
+  <a class="hd__tel" href="tel:08041397584"><small>お電話</small>080-4139-7584</a>
+  <a class="hd__line" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで相談</a>
+  <button class="hd__menu" type="button" aria-expanded="false" aria-controls="spnav"><span></span><span></span><b>MENU</b></button>
 </header>
+<nav class="spnav" id="spnav" hidden aria-label="スマホのメニュー">
+  <a href="#service">サービス</a>
+  <a href="#flow">進め方</a>
+  <a href="#price">料金</a>
+  <a href="#works">制作事例</a>
+  <a href="#about">Harukaze Works について</a>
+  <a href="#faq">よくある質問</a>
+  <a class="spnav__tel" href="tel:08041397584">080-4139-7584</a>
+</nav>
 
-<div class="spnav" id="spnav" hidden>
-  <nav aria-label="スマホ用メニュー">
-    <a href="#worry"><small>Worries</small>こんなお困りごと</a>
-    <a href="#journey"><small>Journey</small>集客の道すじ</a>
-    <a href="#pillars"><small>3 Pillars</small>ホームページ・Googleマップ・LINE</a>
-    <a href="#check"><small>Check</small>第一印象チェック</a>
-    <a href="#industry"><small>For</small>業種別のご案内</a>
-    <a href="#works"><small>Works</small>制作実績</a>
-    <a href="#price"><small>Price</small>料金</a>
-    <a href="#promise"><small>Promise</small>安心の約束</a>
-    <a href="#flow"><small>Flow</small>ご依頼の流れ</a>
-    <a href="#faq"><small>FAQ</small>よくあるご質問</a>
-    <a href="#contact"><small>Contact</small>お問い合わせ</a>
-  </nav>
-  <a class="btn btn--line" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="spnav"><svg class="btn__line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg><span>LINEで無料サンプル依頼</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-</div>
+<main id="main">
 
-<main>
-<!-- ============ 1. HERO（A案：風の線が「集客の道すじ」になる） ============ -->
-<section class="hero hx" id="top">
-  <div class="hx__bg" aria-hidden="true"><i class="hx-blob hx-blob--1"></i><i class="hx-blob hx-blob--2"></i></div>
-  <div class="wrap hx__wrap">
-    <div class="hx__copy">
-      <p class="hx__en"><span>Web Design &amp; Local Marketing</span></p>
-      <h1 class="hx__h1" aria-label="見つかる。選ばれる。また来てもらえる。">
-        <span class="hx__l"><span class="hx__in"><em>見つかる。</em></span></span>
-        <span class="hx__l"><span class="hx__in"><em>選ばれる。</em></span></span>
-        <span class="hx__l"><span class="hx__in"><em>また来てもらえる。</em></span></span>
-      </h1>
-      <p class="hx__sub">ホームページをまんなかに、<br class="pc">お客さんがお店にたどり着く道すじを、いっしょに整えます。</p>
-      <div class="hx__btns">
-        <a class="btn btn--line btn--hero mag" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="hero"><svg class="btn__line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg><span>LINEで無料サンプル依頼</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-        <a class="btn btn--ghost mag" href="#journey"><span>集客の道すじを見る</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-      </div>
-      <ul class="hx__facts"><li><b>制作費</b>30,000円〜</li><li><b>月額</b>0円の買い切りOK</li><li><b>チェック・サンプル</b>無料</li></ul>
-    </div>
+<!-- ===== 1. ヒーロー ===== -->
+<section class="hero" id="hero" data-once="hw-hero" aria-label="Harukaze Works">
+  <div class="hero__bgtext" aria-hidden="true">
+    <span>ホームページ　Googleマップ　LINE　小さなお店の、身近なウェブ担当。</span>
+    <span>お話を伺い、強みを整理して、ページにする。ホームページ　Googleマップ</span>
+    <span>LINE　小さなお店の、身近なウェブ担当。お話を伺い、強みを整理して、</span>
+    <span>ページにする。ホームページ　Googleマップ　LINE　小さなお店の、身近な</span>
+    <span>ウェブ担当。お話を伺い、強みを整理して、ページにする。ホームページ　</span>
+    <span>Googleマップ　LINE　小さなお店の、身近なウェブ担当。お話を伺い、強み</span>
+  </div>
 
-    <div class="hx-road" aria-hidden="true">
-      <svg class="hx-road__svg" viewBox="0 0 760 640" preserveAspectRatio="xMidYMid meet">
-        <path class="hx-road__w hx-road__w--1" pathLength="1" d="M-200 130 C -80 80, -20 190, 60 170"/>
-        <path class="hx-road__w hx-road__w--2" pathLength="1" d="M-200 160 C -90 120, -10 210, 60 180"/>
-        <path class="hx-road__w hx-road__w--3" pathLength="1" d="M-200 190 C -100 170, 0 230, 60 190"/>
-        <path class="hx-road__base" d="M60 180 C 200 150, 330 120, 400 220 S 500 450, 400 500 S 220 560, 480 610 S 700 570, 800 520"/>
-        <path class="hx-road__line" pathLength="1" d="M60 180 C 200 150, 330 120, 400 220 S 500 450, 400 500 S 220 560, 480 610 S 700 570, 800 520"/>
-      </svg>
-      <div class="hx-st hx-st--find">
-        <p class="hx-st__tag"><i>1</i>見つかる</p>
-        <div class="hx-search">
-          <div class="hx-search__box"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg><span data-hx-typer>近くの 整体院</span><i class="hx-search__caret"></i></div>
-          <ul class="hx-search__res" data-hx-res>
-            <li><b>〇〇整体院</b><span>徒歩5分・営業中</span></li>
-            <li><b>写真と料金がひと目で</b><span>ホームページ・地図・電話</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="hx-st hx-st--choose">
-        <p class="hx-st__tag"><i>2</i>選ばれる</p>
-        <div class="hx-phone"><div class="hx-phone__screen"><img class="hx-phone__page" src="images/site_long.jpg" alt="" width="400" height="2500"></div></div>
-      </div>
-      <div class="hx-st hx-st--return">
-        <p class="hx-st__tag"><i>3</i>また来てもらえる</p>
-        <p class="hx-chip hx-chip--1">来週も予約できますか？</p>
-        <p class="hx-chip hx-chip--2">新しいメニュー、気になります</p>
+  <div class="hero__shape">
+    <div class="hero__reveal">
+      <div class="hero__photos">
+        <figure class="hero__ph is-on sp-r"><img src="images/hero_kosugi.jpg" width="2000" height="1250" alt="制作したサイト：小杉結ヴァイオリン教室" decoding="async" fetchpriority="high"></figure>
+        <figure class="hero__ph sp-r"><img src="images/hero_sunny.jpg" width="2000" height="1250" alt="制作したサイト：Sunny Care～こころ～" decoding="async"></figure>
+        <figure class="hero__ph"><img src="images/hero_lunon.jpg" width="2000" height="1250" alt="制作したサイト：lunon ballet" decoding="async" loading="lazy"></figure>
       </div>
     </div>
   </div>
-  <button class="hx__pause" type="button" aria-pressed="false" aria-label="動きを止める"><span></span></button>
-  <svg class="wave" viewBox="0 0 2880 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 0 720 40 S 1200 80 1440 40 S 1920 0 2160 40 S 2640 80 2880 40 V80 H0Z"/></svg>
-</section>
+  <svg class="hero__clip" width="0" height="0" aria-hidden="true" focusable="false">
+    <clipPath id="blob" clipPathUnits="objectBoundingBox">
+      <path d="M0.33,0.015 C0.58,-0.02 0.86,0.02 0.965,0.17 C1.02,0.30 0.99,0.52 0.975,0.70 C0.96,0.88 0.85,0.995 0.72,0.99 C0.61,0.985 0.57,0.88 0.585,0.74 C0.60,0.60 0.53,0.47 0.36,0.445 C0.18,0.42 0.03,0.36 0.03,0.23 C0.03,0.09 0.15,0.035 0.33,0.015 Z"/>
+    </clipPath>
+    <clipPath id="blob-sp" clipPathUnits="objectBoundingBox">
+      <path d="M0.20,0.04 C0.42,-0.01 0.80,0.00 0.93,0.10 C1.03,0.20 0.99,0.55 0.95,0.74 C0.91,0.93 0.74,1.0 0.52,0.985 C0.30,0.97 0.10,0.93 0.045,0.74 C-0.01,0.55 0.00,0.25 0.05,0.15 C0.08,0.08 0.12,0.055 0.20,0.04 Z"/>
+    </clipPath>
+  </svg>
 
-<!-- ============ 2. こんなお困りごと（不 → 解決） ============ -->
-<section class="sec worry" id="worry">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">Worries</p>
-      <h2 class="st__jp fade">こんな<span class="mark">お困りごと</span>は、<br>ありませんか。</h2>
-    </header>
-
-    <ol class="wr">
-      <li class="wr__item fade" style="--i:0">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><circle cx="27" cy="27" r="16"/><path d="M39 39l14 14"/><path d="M21 31c2-3 4-4 6-4s4 1 6 4"/><path d="M22 22h.01M32 22h.01"/></svg>
-          <p>検索されても、お店の良さが伝わらない</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>名前で検索した人が最初に見る場所に、選ばれる理由をまとめます。</p></div>
-      </li>
-      <li class="wr__item fade" style="--i:1">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 56s-16-15-16-28a16 16 0 0132 0c0 13-16 28-16 28z"/><circle cx="32" cy="28" r="6"/><path d="M44 46l10 10M54 46L44 56"/></svg>
-          <p>Googleマップの営業時間や写真が、古いまま</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>地図に出る情報も、ホームページと同じ内容にそろえます。</p></div>
-      </li>
-      <li class="wr__item fade" style="--i:2">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 10h10l4 12-6 4c3 7 7 11 14 14l4-6 12 4v10c0 2-2 4-4 4C29 52 12 35 12 14c0-2 2-4 4-4z"/><path d="M42 10l12 12M54 10L42 22"/></svg>
-          <p>電話に出られないときに、予約や問い合わせを逃している</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>LINEやフォームで、営業時間外でも連絡を受け取れる形にします。</p></div>
-      </li>
-      <li class="wr__item fade" style="--i:3">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 12C20 12 10 19.6 10 29c0 5.6 3.5 10.6 8.9 13.6L17 51l9.5-5.3c1.7.4 3.6.6 5.5.6 12 0 22-7.6 22-17S44 12 32 12z"/><path d="M24 27a4 4 0 018 0M32 27a4 4 0 018 0"/><path d="M24 27c0 6 8 9 8 9s8-3 8-9"/></svg>
-          <p>新しいお客さんは来るのに、2回目につながらない</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>LINEで、次の予約の案内やお知らせを届けられる形にします。</p></div>
-      </li>
-      <li class="wr__item fade" style="--i:4">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 52h44M16 52V36M28 52V24M40 52V30M52 52V16"/><path d="M44 10l4-4 4 4M48 6v10"/></svg>
-          <p>SNSやチラシを頑張っても、何が効いているか分からない</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>どこから何件問い合わせが来たかを数えて、毎月の数字でお伝えします。</p></div>
-      </li>
-      <li class="wr__item fade" style="--i:5">
-        <div class="wr__q">
-          <svg class="wr__ic draw" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="40" height="30" rx="6"/><path d="M20 52h16M28 42v10"/><path d="M50 30l6 6 0 0M56 30l-6 6"/><path d="M16 22h16M16 30h10"/></svg>
-          <p>HPを直したくても、頼める人がいない</p>
-        </div>
-        <svg class="wr__arw" viewBox="0 0 24 40" aria-hidden="true"><path d="M12 2c-3 8 3 16 0 26"/><path d="M6 22l6 8 6-8"/></svg>
-        <div class="wr__a"><p class="wr__lbl">Harukaze Works なら</p><p>写真と一言をLINEで送っていただければ、こちらで整えて更新します。</p></div>
-      </li>
-    </ol>
-    <p class="wr__close fade">ひとつでも当てはまったら、<br class="sp-only">まずは無料の「第一印象チェック」から。</p>
+  <div class="hero__copy">
+    <h1 class="hero__h">
+      <span class="hero__l"><span class="hero__r">小さなお店に、</span></span>
+      <span class="hero__l hero__l--2"><span class="hero__r">身近なウェブ担当を。</span></span>
+    </h1>
+    <p class="hero__sub">中小企業の事業計画書を150本以上書いてきた経験で、お店や会社の「選ばれる理由」を言葉にして、ホームページにします。</p>
+    <p class="hero__cta"><a class="btn btn--line" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む<i aria-hidden="true">→</i></a></p>
   </div>
+
+  <button class="hero__pause" type="button" aria-pressed="false" aria-label="画面の入れ替わりを止める"><span class="hero__pause-i" aria-hidden="true"></span><span class="hero__pause-t">止める</span></button>
+
+  <ul class="hero__band">
+    <li><small>サンプル制作</small><b>無料</b></li>
+    <li><small>ホームページ</small><b>5万円〜</b></li>
+    <li><small>お支払い</small><b>完成後</b></li>
+  </ul>
 </section>
 
-<!-- ============ 3. 集客の道すじ（5つの段階 × 3本柱） ============ -->
-<section class="sec jr" id="journey">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">Journey</p>
-      <h2 class="st__jp fade">お客さんがお店に来るまでの、<br class="sp-only"><span class="mark">道すじ</span>を整えます。</h2>
-      <p class="st__lead fade">ホームページだけ、地図だけでは、途中で道が途切れてしまいます。<br class="pc">見つけてもらってから、また来てもらうまで。つながった1本の道にします。</p>
-    </header>
-    <div class="jr__road" data-jr>
-      <svg class="jr__svg" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
-        <path class="jr__bg" d="M0 60 C 100 10, 150 110, 250 60 S 400 10, 500 60 S 650 110, 750 60 S 900 10, 1000 60"/>
-        <path class="jr__v" pathLength="1" d="M0 60 C 100 10, 150 110, 250 60 S 400 10, 500 60 S 650 110, 750 60 S 900 10, 1000 60"/>
-      </svg>
-      <ol class="jr__steps">
-        <li class="jr__s" style="--i:0">
-          <span class="jr__dot">1</span>
-          <h3>見つけてもらう</h3>
-          <p class="jr__who">お客さんは、名前や「近くの〇〇」で検索し、Googleマップで場所と営業時間を確かめます。</p>
-          <p class="jr__do">地図と検索に出る情報を、正しくそろえます。</p>
-          <p class="jr__tags"><span class="tg tg--map">Googleマップ</span></p>
-        </li>
-        <li class="jr__s" style="--i:1">
-          <span class="jr__dot">2</span>
-          <h3>選んでもらう</h3>
-          <p class="jr__who">ホームページで、料金・写真・お店の人柄を見比べます。</p>
-          <p class="jr__do">選ばれる理由が伝わるホームページをつくります。</p>
-          <p class="jr__tags"><span class="tg tg--hp">ホームページ</span></p>
-        </li>
-        <li class="jr__s" style="--i:2">
-          <span class="jr__dot">3</span>
-          <h3>連絡してもらう</h3>
-          <p class="jr__who">電話・LINE・フォームから、予約や相談をします。</p>
-          <p class="jr__do">営業時間外でも、迷わず連絡できる入口を整えます。</p>
-          <p class="jr__tags"><span class="tg tg--hp">ホームページ</span><span class="tg tg--line">LINE</span></p>
-        </li>
-        <li class="jr__s" style="--i:3">
-          <span class="jr__dot">4</span>
-          <h3>また来てもらう</h3>
-          <p class="jr__who">LINEで、次の予約の案内やお知らせを受け取ります。</p>
-          <p class="jr__do">LINEの配信で、2回目・3回目につなげます。</p>
-          <p class="jr__tags"><span class="tg tg--line">LINE</span></p>
-        </li>
-        <li class="jr__s" style="--i:4">
-          <span class="jr__dot">5</span>
-          <h3>数字で振り返る</h3>
-          <p class="jr__who">何件問い合わせが来たか、どこから来たかを、毎月ふり返ります。</p>
-          <p class="jr__do">数字をそのままご報告し、次の一手をいっしょに考えます。</p>
-          <p class="jr__tags"><span class="tg">月1回のレポート</span></p>
-        </li>
-      </ol>
-    </div>
-    <p class="jr__close fade">どこから始めても大丈夫です。<br class="sp-only">今のホームページやお店の状況に合わせて、必要なところだけお手伝いします。</p>
-  </div>
-</section>
-
-<!-- ============ 4. 3本柱 ============ -->
-<section class="sec pl" id="pillars">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">3 Pillars</p>
-      <h2 class="st__jp fade">ホームページ・Googleマップ・LINE。<br><span class="mark">3本柱</span>で、集客をお手伝いします。</h2>
-    </header>
-    <div class="pl__grid">
-      <article class="pl__card pl__card--hp fade" style="--i:0">
-        <p class="pl__role">選んでもらう</p>
-        <svg class="pl__ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="9" width="36" height="26" rx="4"/><path d="M18 41h12M24 35v6M12 17h14M12 23h9"/><circle cx="34" cy="21" r="4"/></svg>
-        <h3>ホームページ</h3>
-        <p class="pl__txt">お店の良さと料金がひと目で伝わる、スマホで見やすいホームページ。デザインは3パターンから選べます。</p>
-        <ul class="pl__list"><li><span>ライト（1ページ）</span><b>30,000円</b></li><li><span>スタンダード（3〜5ページ）</span><b>50,000円</b></li><li><span>プレミアム（6ページ〜）</span><b>98,000円</b></li></ul>
-        <p class="pl__grow"><small>育てる（月額・任意）</small>更新サポート 月1,000円〜</p>
-        <a class="pl__go" href="#price">料金をくわしく<svg><use href="#arw"/></svg></a>
-      </article>
-      <article class="pl__card pl__card--map fade" style="--i:1">
-        <p class="pl__role">見つけてもらう</p>
-        <svg class="pl__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 43s-13-12-13-23a13 13 0 0126 0c0 11-13 23-13 23z"/><circle cx="24" cy="20" r="5"/></svg>
-        <h3>Googleマップ</h3>
-        <p class="pl__txt">検索や地図に出るお店の情報を、写真・営業時間・メニューまでそろえます。口コミの集め方もお伝えします。</p>
-        <ul class="pl__list"><li><span>Googleマップ整備</span><b>30,000円</b></li><li><span>HPと同時なら</span><b>25,000円</b></li><li><span>口コミの集め方キット</span><b>5,000円</b></li></ul>
-        <p class="pl__grow"><small>育てる（月額・任意）</small>マップ運用 月5,000円</p>
-        <a class="pl__go" href="#price">料金をくわしく<svg><use href="#arw"/></svg></a>
-      </article>
-      <article class="pl__card pl__card--line fade" style="--i:2">
-        <p class="pl__role">また来てもらう</p>
-        <svg class="pl__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 9C14 9 6 15.3 6 23c0 4.6 2.9 8.7 7.3 11.2L12 41l7.8-4.4c1.3.3 2.8.4 4.2.4 10 0 18-6.3 18-14S34 9 24 9z"/><path d="M16 21h16M16 26h10"/></svg>
-        <h3>LINE</h3>
-        <p class="pl__txt">LINE公式アカウントの開設から、予約の受け付け、お知らせの配信まで。2回目のご来店につなげます。</p>
-        <ul class="pl__list"><li><span>LINE公式はじめてセット</span><b>25,000円</b></li></ul>
-        <p class="pl__grow"><small>育てる（月額・任意）</small>LINE配信の代行 月5,000円〜</p>
-        <a class="pl__go" href="#price">料金をくわしく<svg><use href="#arw"/></svg></a>
-      </article>
-    </div>
-    <p class="pl__note fade">アカウントは、どれもお客様の名義でおつくりします。月額は任意で、いつでもやめられます。</p>
-  </div>
-</section>
-
-
-<!-- ============ 3. 第一印象チェック ============ -->
-<section class="sec chk" id="check">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">First Impression Check</p>
-      <h2 class="st__jp fade">お客さんの目に映る<span class="mark">第一印象</span>を、<br>3つの観点でチェックします。</h2>
-      <p class="st__lead fade">名前で検索してから、連絡するまで。<br class="sp-only">お客さんがたどる道すじを、3つに分けて確かめます。</p>
-    </header>
-
-    <div class="chk__grid">
-      <div class="chk__sheet fade" role="tablist" aria-label="第一印象チェックの3つの観点">
-        <p class="chk__sheet-ttl"><span>第一印象チェック</span><small>Check Sheet</small></p>
-        <button class="chk__row is-cur" type="button" role="tab" aria-selected="true" aria-controls="chkDemo" data-k="0">
-          <span class="chk__no">1</span>
-          <span class="chk__body"><b>見つかるか</b><span>検索やGoogleマップで、必要な情報が出てくるか</span></span>
-          <svg class="chk__tick" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><path d="M12 21l6 6 11-13"/></svg>
-        </button>
-        <button class="chk__row" type="button" role="tab" aria-selected="false" aria-controls="chkDemo" data-k="1">
-          <span class="chk__no">2</span>
-          <span class="chk__body"><b>伝わるか</b><span>料金・実績・サービス内容が、はじめての人に伝わるか</span></span>
-          <svg class="chk__tick" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><path d="M12 21l6 6 11-13"/></svg>
-        </button>
-        <button class="chk__row" type="button" role="tab" aria-selected="false" aria-controls="chkDemo" data-k="2">
-          <span class="chk__no">3</span>
-          <span class="chk__body"><b>迷わないか</b><span>電話・予約・問い合わせまで、迷わず進めるか</span></span>
-          <svg class="chk__tick" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><path d="M12 21l6 6 11-13"/></svg>
-        </button>
-        <i class="chk__prog" aria-hidden="true"></i>
-      </div>
-
-      <div class="chk__demo fade" id="chkDemo" role="tabpanel" aria-live="polite">
-        <div class="phone phone--chk"><div class="phone__view">
-          <!-- ① 見つかるか -->
-          <div class="cd cd--1 is-on" data-k="0">
-            <div class="cd__bar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/></svg><span class="cd__q" data-q="〇〇工務店">〇〇工務店</span><i class="caret"></i></div>
-            <div class="cd__map"><i class="cd__road"></i><i class="cd__road cd__road--v"></i><b class="cd__pin"></b><span class="cd__mapnote">地図は見本です</span></div>
-            <div class="cd__place">
-              <p class="cd__name">〇〇工務店</p>
-              <p class="cd__meta"><span class="cd__ok">営業中</span>9:00〜18:00</p>
-              <div class="cd__acts"><span>経路</span><span>電話</span><span>ウェブサイト</span></div>
-              <div class="cd__pics"><i style="background-image:url(samples/koumuten/images/work_kitchen.jpg)"></i><i style="background-image:url(samples/koumuten/images/work_bath.jpg)"></i><i style="background-image:url(samples/koumuten/images/work_living.jpg)"></i></div>
-            </div>
-            <div class="cd__hit"><span>公式サイト</span><b>〇〇工務店｜〇〇区のリフォーム</b><small>施工事例・対応エリア・費用の目安</small></div>
-            <div class="cd__sk" aria-hidden="true"><i></i><i></i><i></i></div>
-          </div>
-          <!-- ② 伝わるか -->
-          <div class="cd cd--2" data-k="1">
-            <div class="cd__site">
-              <div class="cd__ph" style="background-image:url(samples/koumuten/images/hero_2.jpg)"></div>
-              <p class="cd__catch">住まいの「困った」に、<br>近くの工務店が。</p>
-            </div>
-            <ul class="cd__chips">
-              <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-8"/></svg>費用の目安</li>
-              <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-8"/></svg>施工事例</li>
-              <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-8"/></svg>工事の内容</li>
-              <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-8"/></svg>代表の顔</li>
-            </ul>
-          </div>
-          <!-- ③ 迷わないか -->
-          <div class="cd cd--3" data-k="2">
-            <p class="cd__ask">ご相談・お見積もり</p>
-            <span class="cd__btn cd__btn--line">LINEで相談する</span>
-            <span class="cd__btn cd__btn--tel">電話する</span>
-            <span class="cd__btn cd__btn--form">フォームで送る（24時間）</span>
-            <i class="cd__tap" aria-hidden="true"></i>
-          </div>
-        </div></div>
-        <p class="chk__cap" aria-hidden="true">画面はイメージです</p>
-      </div>
-    </div>
-
-    <div class="chk__cta fade">
-      <p class="chk__big">無料でチェックして、<br class="sp-only"><span class="circ">サンプル<svg viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M168 14C130 2 52 3 22 18 2 28 6 52 46 60c40 7 104 4 132-10 22-11 14-30-14-38"/></svg></span>をお作りします。</p>
-      <p class="chk__txt">今のホームページやSNSを否定するためのチェックではありません。<br class="pc">「もっと伝わる余地」を見つけて、そのまま形にしたサンプルサイトをお見せします。</p>
-      <p class="chk__dm"><b>ご案内をお送りした方へ</b>お手元の「第一印象チェック」は、この3つの観点でまとめたものです。</p>
-      <a class="btn btn--line mag" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="check"><svg class="btn__line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg><span>LINEで無料サンプル依頼</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. 業種別の入口 ============ -->
-<section class="sec ind" id="industry">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">For</p>
-      <h2 class="st__jp fade">業種ごとに、<br>見られるポイントは違います。</h2>
-    </header>
-    <ul class="ind__grid">
-      <li class="fade" style="--i:0"><a class="ind__card" href="koumuten/">
-        <span class="ind__ph"><img src="images/biz_build.jpg" alt="内装工事中の室内" width="800" height="526" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-        <span class="ind__tag">工務店・リフォーム</span>
-        <span class="ind__line">見積もりの前に、<br>会社名で検索されています。</span>
-        <span class="ind__see">施工事例・対応エリア・代表の顔</span>
-        <span class="ind__go">工務店向けのご案内<svg><use href="#arw"/></svg></span>
-      </a></li>
-      <li class="fade" style="--i:1"><a class="ind__card" href="#works">
-        <span class="ind__ph"><img src="images/biz_class.jpg" alt="ピアノの鍵盤" width="800" height="528" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-        <span class="ind__tag">教室・スクール</span>
-        <span class="ind__line">体験の前に、<br>雰囲気と料金を確かめています。</span>
-        <span class="ind__see">クラス・料金・レッスン日</span>
-        <span class="ind__go">教室の実績を見る<svg><use href="#arw"/></svg></span>
-      </a></li>
-      <li class="fade" style="--i:2"><a class="ind__card" href="#works">
-        <span class="ind__ph"><img src="images/biz_salon.jpg" alt="タオルと花を置いた施術台" width="800" height="533" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-        <span class="ind__tag">サロン・整体</span>
-        <span class="ind__line">予約の前に、<br>施術する人と場所が見られています。</span>
-        <span class="ind__see">メニュー・料金・予約の方法</span>
-        <span class="ind__go">サロンの実績を見る<svg><use href="#arw"/></svg></span>
-      </a></li>
-      <li class="fade" style="--i:3"><a class="ind__card" href="#patterns">
-        <span class="ind__ph"><img src="images/biz_food.jpg" alt="定食の写真" width="640" height="416" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-        <span class="ind__tag">お店・その他</span>
-        <span class="ind__line">来店の前に、<br>メニューと営業時間が見られています。</span>
-        <span class="ind__see">メニュー・営業時間・アクセス</span>
-        <span class="ind__go">お店の見本サイトを見る<svg><use href="#arw"/></svg></span>
-      </a></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ 5. 実績（横に流れる） ============ -->
-<section class="hs" id="works">
-  <div class="hs__sticky">
-    <div class="hs__track">
-      <div class="hs__panel hs__intro">
-        <p class="st__en">Works</p>
-        <h2 class="st__jp">困っていたことが、<br>こう変わりました。</h2>
-        <p class="hs__hint" aria-hidden="true"><span class="pc-only">スクロールで横に進みます</span><span class="sp-only">下へ続きます</span><i></i></p>
-      </div>
-      <article class="hs__panel wk">
-        <a class="wk__card tilt" href="https://preview.harukaze-works.net/sunny-care/stock/" target="_blank" rel="noopener">
-          <span class="wk__shot"><img src="images/sunny_pc.jpg?v=20261014" alt="Sunny Care～こころ～様の公式サイト" width="1200" height="750" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="wk__sp"><img src="images/sunny_sp.jpg?v=20261014" alt="" width="540" height="1169" loading="lazy" onerror="this.remove()"></span>
-          <span class="wk__view">サイトを<br>見る</span>
-        </a>
-        <div class="wk__txt">
-          <p class="wk__no" aria-hidden="true">Salon</p>
-          <p class="wk__cat">看護師が行う目元ケア（アイドレナージュ）</p>
-          <h3>Sunny Care～こころ～ 様</h3>
-          <dl class="ba">
-            <div class="ba__b"><dt>困っていたこと</dt><dd>曜日ごとに施術する場所が変わり、どこで受けられるのかが伝えにくかった。</dd></div>
-            <div class="ba__a"><dt>こう変わりました</dt><dd>今日の施術場所と、場所ごとの予約方法がひと目で分かるサイトに。</dd></div>
-          </dl>
-        </div>
-      </article>
-      <article class="hs__panel wk">
-        <a class="wk__card tilt" href="https://lunon-ballet.netlify.app/" target="_blank" rel="noopener">
-          <span class="wk__shot"><img src="images/lunon_pc.jpg" alt="lunon ballet様の公式サイト" width="1200" height="750" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="wk__sp"><img src="images/lunon_sp.jpg" alt="" width="540" height="1169" loading="lazy" onerror="this.remove()"></span>
-          <span class="wk__view">サイトを<br>見る</span>
-        </a>
-        <div class="wk__txt">
-          <p class="wk__no" aria-hidden="true">Studio</p>
-          <p class="wk__cat">大人のためのバレエサークル</p>
-          <h3>lunon ballet 様</h3>
-          <dl class="ba">
-            <div class="ba__b"><dt>困っていたこと</dt><dd>Instagramは動いているのに、HPが更新できていなかった。</dd></div>
-            <div class="ba__a"><dt>こう変わりました</dt><dd>今の活動が伝わるサイトに。クラスと料金、レッスン日を整理し、体験レッスンの申し込みにつなげました。</dd></div>
-          </dl>
-        </div>
-      </article>
-      <article class="hs__panel wk">
-        <a class="wk__card tilt" href="https://mstage-official.com/" target="_blank" rel="noopener">
-          <span class="wk__shot"><img src="images/mstage_pc.jpg" alt="株式会社M-STAGE様の公式サイト" width="1200" height="750" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="wk__sp"><img src="images/mstage_sp.jpg" alt="" width="540" height="1169" loading="lazy" onerror="this.remove()"></span>
-          <span class="wk__view">サイトを<br>見る</span>
-        </a>
-        <div class="wk__txt">
-          <p class="wk__no" aria-hidden="true">Interior</p>
-          <p class="wk__cat">総合内装仕上げ業</p>
-          <h3>株式会社M-STAGE 様</h3>
-          <dl class="ba">
-            <div class="ba__b"><dt>困っていたこと</dt><dd>会社を紹介する受け皿がInstagramしかなく、信用につながりにくかった。公共工事の入札には、ホームページが必要だった。</dd></div>
-            <div class="ba__a"><dt>こう変わりました</dt><dd>会社概要と施工イメージをまとめた、会社の顔になる公式サイトに。公開後の更新も担当しています。</dd></div>
-          </dl>
-        </div>
-      </article>
-      <div class="hs__panel hs__next">
-        <div class="next">
-          <p class="next__no" aria-hidden="true">Next</p>
-          <p class="next__ttl">次は、<br>あなたのお店の番です。</p>
-          <p>あなたのお店に合わせたサンプルサイトを、<strong>無料で</strong>おつくりします。</p>
-          <a class="btn btn--line mag" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="works"><svg class="btn__line" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg><span>LINEで無料サンプル依頼</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="hs__bar" aria-hidden="true"><i></i></div>
-  </div>
-</section>
-
-<!-- ============ 6. デザインを選べる（スクロールで扇のように広がる） ============ -->
-<section class="fan" id="patterns">
-  <div class="fan__sticky">
-    <div class="wrap fan__wrap">
-      <header class="st st--c">
-        <p class="st__en fade">3 Patterns</p>
-        <h2 class="st__jp fade">完成イメージを<span class="mark">3パターン</span>、<br>スマホで動かして比べてから選べます。</h2>
-        <p class="st__lead fade">同じ内容でも、デザインの方向性でお店の印象は大きく変わります。<br class="pc">サンプルの段階で、実際に動くスマホ画面を見比べていただけます。</p>
-      </header>
-      <div class="fan__tabs" role="tablist" aria-label="デザインのトーン">
-        <button type="button" role="tab" aria-selected="true" data-k="0">やさしい</button>
-        <button type="button" role="tab" aria-selected="false" data-k="1">スタイリッシュ</button>
-        <button type="button" role="tab" aria-selected="false" data-k="2">和風</button>
-      </div>
-      <div class="fan__stage">
-        <figure class="fan__item is-cur" style="--i:0">
-          <a class="fan__link" href="samples/natural/" target="_blank" rel="noopener" data-view aria-label="やさしい・親しみの見本サイトを開く">
-            <span class="phone phone--fan"><span class="phone__view"><span class="mk mk--img"><img src="images/pattern_natural.jpg" alt="やさしい・親しみの見本サイト（スマホ表示）" width="480" height="2174" loading="lazy" onerror="this.remove()"></span></span></span>
-          </a>
-          <figcaption><b>Natural</b><span>やさしい・親しみ</span><a class="fan__go" href="samples/natural/" target="_blank" rel="noopener">見本サイトを見る<svg><use href="#arw"/></svg></a></figcaption>
-        </figure>
-        <figure class="fan__item" style="--i:1">
-          <a class="fan__link" href="samples/stylish/" target="_blank" rel="noopener" data-view aria-label="スタイリッシュ・かっこいいの見本サイトを開く">
-            <span class="phone phone--fan"><span class="phone__view"><span class="mk mk--img"><img src="images/pattern_stylish.jpg" alt="スタイリッシュ・かっこいいの見本サイト（スマホ表示）" width="480" height="2174" loading="lazy" onerror="this.remove()"></span></span></span>
-          </a>
-          <figcaption><b>Stylish</b><span>スタイリッシュ・かっこいい</span><a class="fan__go" href="samples/stylish/" target="_blank" rel="noopener">見本サイトを見る<svg><use href="#arw"/></svg></a></figcaption>
-        </figure>
-        <figure class="fan__item" style="--i:2">
-          <a class="fan__link" href="samples/wa/" target="_blank" rel="noopener" data-view aria-label="和風・落ち着きの見本サイトを開く">
-            <span class="phone phone--fan"><span class="phone__view"><span class="mk mk--img"><img src="images/pattern_wa.jpg" alt="和風・落ち着きの見本サイト（スマホ表示）" width="480" height="2174" loading="lazy" onerror="this.remove()"></span></span></span>
-          </a>
-          <figcaption><b>Japanese</b><span>和風・落ち着き</span><a class="fan__go" href="samples/wa/" target="_blank" rel="noopener">見本サイトを見る<svg><use href="#arw"/></svg></a></figcaption>
-        </figure>
-      </div>
-      <p class="fan__note">※ 架空の定食屋「こもれび食堂」でつくった見本です。画面を押すと、実際に動くサイトを開けます。<br class="pc">ほかに「誠実・信頼感」「清潔感」「上品・高級感」のテイストもお選びいただけます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. 料金 ============ -->
-<section class="sec price" id="price">
-  <svg class="wave wave--top" viewBox="0 0 2880 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 0 720 40 S 1200 80 1440 40 S 1920 0 2160 40 S 2640 80 2880 40 V80 H0Z"/></svg>
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">Price</p>
-      <h2 class="st__jp fade">「つくる」は買い切り。<br class="sp-only"><span class="mark">「育てる」</span>は必要なときだけ。</h2>
-      <p class="st__lead fade">ホームページ・Googleマップ・LINEを「つくる」費用と、集客を「育てる」月額に分かれています。<br class="pc">月額は任意で、長い契約の縛りはありません。</p>
-    </header>
-
-    <p class="price__phase fade"><small>Make</small>つくる（制作費・買い切り）</p>
-    <div class="common fade">
-      <p class="common__ttl">全プラン共通</p>
-      <ul class="common__list">
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>デザインを3パターンから選べる</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>原稿づくりのサポート</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>検索の基本設定</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>スマホ対応</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>修正は何度でも</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>サーバー代・月額なしの買い切りも可</li>
-        <li><svg class="ico" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 10.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ページ追加は1ページ5,000円</li>
-      </ul>
-    </div>
-
-    <div class="plans">
-      <div class="plan fade">
-        <p class="plan__en">Light</p>
-        <h3 class="plan__name">ライト<span class="plan__pages">1ページ</span></h3>
-        <p class="plan__who">開業したばかりのお店、まずは検索で見つかるようにしたい方に。</p>
-        <p class="plan__price"><small>制作費（税込）</small><b>30,000</b><span>円</span><em class="plan__fix">追加料金なし</em></p>
-        <ul><li>営業時間・地図・連絡先をひとまとめに</li><li>代表的なメニュー・サービスの紹介</li><li>SNSへのリンク</li></ul>
-        <a class="plan__demo" href="samples/light/" target="_blank" rel="noopener" data-view>
-          <span class="plan__brw"><i></i><i></i><i></i></span>
-          <span class="plan__shot plan__shot--long"><img src="images/plan_light.jpg" alt="ライトプランの見本サイト（1ページ全体）" width="640" height="1996" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="plan__go">見本サイトを見る<svg><use href="#arw"/></svg></span>
-        </a>
-      </div>
-      <div class="plan fade">
-        <p class="plan__en">Standard</p>
-        <h3 class="plan__name">スタンダード<span class="plan__pages">3〜5ページ</span></h3>
-        <p class="plan__who">メニューや施工事例をしっかり見せて、問い合わせにつなげたい方に。</p>
-        <p class="plan__price"><small>制作費（税込）</small><b>50,000</b><span>円</span><em class="plan__fix">追加料金なし</em></p>
-        <ul><li>メニュー・施工事例などの詳細ページ</li><li>お問い合わせフォーム</li><li>Instagramへのご案内</li></ul>
-        <a class="plan__demo" href="samples/natural/" target="_blank" rel="noopener" data-view>
-          <span class="plan__brw"><i></i><i></i><i></i></span>
-          <span class="plan__shot"><img src="images/plan_standard.jpg" alt="スタンダードプランの見本サイト（4ページ）" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="plan__go">見本サイトを見る<svg><use href="#arw"/></svg></span>
-        </a>
-      </div>
-      <div class="plan plan--rec fade">
-        <span class="plan__badge">迷ったらこちら</span>
-        <p class="plan__en">Premium</p>
-        <h3 class="plan__name">プレミアム<span class="plan__pages">6ページ〜</span></h3>
-        <p class="plan__who">見た目の印象で選ばれたい方、ホームページを集客の入口として育てたい方に。</p>
-        <p class="plan__price"><small>制作費（税込）</small><b>98,000</b><span>円</span><em class="plan__fix">追加料金なし</em></p>
-        <p class="plan__key"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>HPから何件問い合わせが来たか、毎月分かります。</p>
-        <ul><li>スタンダードの内容すべて</li><li>Googleマップ（Googleビジネスプロフィール）の整備</li><li>アクセス解析の設定<sup>※</sup></li><li>目を引くファーストビューの演出</li><li>スクロールに合わせて動く演出</li><li>「こだわり・ストーリー」ページ</li><li>ギャラリー・スタッフ募集ページ</li><li>パソコンでも凝った見せ方</li></ul>
-        <a class="plan__demo" href="samples/premium/" target="_blank" rel="noopener" data-view>
-          <span class="plan__brw"><i></i><i></i><i></i></span>
-          <span class="plan__shot"><img src="images/plan_premium.jpg" alt="プレミアムプランの見本サイト（横に流れる演出）" width="800" height="500" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></span>
-          <span class="plan__go">見本サイトを見る<svg><use href="#arw"/></svg></span>
-        </a>
-      </div>
-    </div>
-    <p class="plans__fine">※ アクセス解析は、Googleアナリティクス（GA4）とGoogleサーチコンソールを、お客様名義のアカウントで設定します。</p>
-
-    <!-- 追加メニュー -->
-    <div class="addon">
-      <h3 class="sub-h fade"><span>Googleマップ・LINE・解析をつくる</span><small>Add-on</small></h3>
-      <ul class="addon__grid">
-        <li class="addon__item fade" style="--i:0">
-          <svg class="addon__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s-12-11-12-21a12 12 0 0124 0c0 10-12 21-12 21z"/><circle cx="24" cy="21" r="4.5"/></svg>
-          <p class="addon__name">Googleマップ整備</p>
-          <p class="addon__price"><b>30,000</b>円</p>
-          <p class="addon__sub">HPと同時なら <b>25,000円</b></p>
-        </li>
-        <li class="addon__item fade" style="--i:1">
-          <svg class="addon__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38h32M12 38V26M20 38V16M28 38V22M36 38V10"/></svg>
-          <p class="addon__name">アクセス解析の後付け</p>
-          <p class="addon__price"><b>20,000</b>円</p>
-          <p class="addon__sub">他社が作ったHP向け</p>
-        </li>
-        <li class="addon__item fade" style="--i:2">
-          <svg class="addon__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 9C14 9 6 15.3 6 23c0 4.6 2.9 8.7 7.3 11.2L12 41l7.8-4.4c1.3.3 2.8.4 4.2.4 10 0 18-6.3 18-14S34 9 24 9z"/></svg>
-          <p class="addon__name">LINE公式はじめてセット</p>
-          <p class="addon__price"><b>25,000</b>円</p>
-        </li>
-        <li class="addon__item fade" style="--i:3">
-          <svg class="addon__ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7l5 10.5 11.5 1.6-8.3 8 2 11.4L24 33l-10.2 5.5 2-11.4-8.3-8 11.5-1.6z"/></svg>
-          <p class="addon__name">口コミの集め方キット</p>
-          <p class="addon__price"><b>5,000</b>円</p>
-        </li>
-      </ul>
-    </div>
-
-    <!-- 月額サポート（任意） -->
-    <div class="monthly">
-      <p class="price__phase fade"><small>Grow</small>育てる（月額・任意）</p>
-      <p class="monthly__lead fade">まかせたいときだけ、お選びください。<b>いつでもやめられます。</b></p>
-      <div class="monthly__grid">
-        <!-- 更新サポートの目安（つまみを動かして確かめる） -->
-        <div class="sim fade">
-          <div class="sim__head">
-            <p class="sim__en">Update</p>
-            <h4>更新サポート</h4>
-            <p>メニュー変更・営業時間の更新・施工事例の追加など、月の更新回数に合わせてお選びください。</p>
-          </div>
-          <div class="sim__box">
-            <label class="sim__lbl" for="simR">月の更新回数</label>
-            <div class="sim__out" aria-live="polite"><span class="sim__n" id="simN">0回（更新しない）</span><span class="sim__p"><b id="simP">0</b><small id="simU">円／月</small></span><span class="sim__m" id="simM">月額なしの買い切りでOK</span></div>
-            <input class="sim__range" id="simR" type="range" min="0" max="7" step="1" value="0" aria-describedby="simTbl">
-            <div class="sim__ticks" aria-hidden="true"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7〜</span></div>
-            <table class="sim__tbl" id="simTbl">
-              <caption>更新サポートの料金</caption>
-              <tbody>
-                <tr><th>更新しない</th><td>0円（買い切り）</td></tr>
-                <tr><th>月1〜2回</th><td>1,000円／月</td></tr>
-                <tr><th>月3〜4回</th><td>2,000円／月</td></tr>
-                <tr><th>月5〜6回</th><td>3,000円／月</td></tr>
-                <tr><th>それ以上</th><td>応相談</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="mapops fade">
-          <p class="sim__en">Map</p>
-          <h4>マップ運用</h4>
-          <p class="mapops__price"><b>5,000</b>円<small>／月</small></p>
-          <ul class="mapops__list">
-            <li><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="4" width="18" height="24" rx="3"/><path d="M11 12h10M11 17h10M11 22h6"/></svg>毎月1枚のレポート</li>
-            <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28s-9-8-9-15a9 9 0 0118 0c0 7-9 15-9 15z"/><circle cx="16" cy="13" r="3"/></svg>Googleマップへの投稿 月2回</li>
-            <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v14H14l-6 5v-5H5z"/><path d="M10 12h12M10 16h8"/></svg>口コミへの返事の下書き</li>
-            <li><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="17" rx="3"/><path d="M12 27h8M16 23v4"/><path d="M11 15l3 3 7-7"/></svg>HPの更新 月2回</li>
-          </ul>
-        </div>
-        <div class="lineops fade">
-          <p class="sim__en">LINE</p>
-          <h4>LINE配信の代行</h4>
-          <div class="lineops__plans">
-            <div class="lineops__p"><p class="lineops__name">ライト</p><p class="mapops__price"><b>5,000</b>円<small>／月</small></p><ul class="lineops__list"><li>月2回の配信文づくりと送信</li><li>毎月1回のレポート</li></ul></div>
-            <div class="lineops__p"><p class="lineops__name">しっかり</p><p class="mapops__price"><b>10,000</b>円<small>／月</small></p><ul class="lineops__list"><li>月4回の配信文づくりと送信</li><li>毎月1回のレポート</li><li>クーポン・ステップ配信の見直し</li></ul></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="opts fade">
-      <p class="opts__ttl">オプション</p>
-      <ul>
-        <li>ご自身で更新できる仕様（WordPress）<span>応相談</span></li>
-        <li>独自ドメインの取得・設定<span>ドメイン代は実費</span></li>
-      </ul>
-    </div>
-
-    <ul class="notes">
-      <li>※ 表示の金額はすべて税込です。</li>
-      <li>※ プランの金額に、あとから追加料金がかかることはありません。「つくる」の追加や月額サポートは、ご希望の場合のみご案内します。</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============ 8. 安心の約束 ============ -->
-<section class="sec promise" id="promise">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">Promise</p>
-      <h2 class="st__jp fade">安心しておまかせいただくための、<br>4つの約束</h2>
-    </header>
-    <div class="e6" data-e6>
-      <p class="e6__txt"><span class="e6__l">やりっぱなしに、しません。</span><span class="e6__l">やったことと、その結果を、</span><span class="e6__l">数字で、ありのまま</span><span class="e6__l">お伝えします。</span></p>
-    </div>
-    <ol class="pm">
-      <li class="pm__item fade" style="--i:0">
-        <span class="pm__no">01</span>
-        <svg class="pm__ic draw" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="22" r="10"/><path d="M14 54c2-11 9-17 18-17s16 6 18 17"/><rect x="40" y="30" width="16" height="12" rx="3"/><path d="M44 30v-4a4 4 0 018 0v4"/></svg>
-        <h3>アカウントは、お客様の名義で</h3>
-        <p>Googleマップ（Googleビジネスプロフィール）やアクセス解析のアカウントは、お客様の名義でおつくりします。</p>
-      </li>
-      <li class="pm__item fade" style="--i:1">
-        <span class="pm__no">02</span>
-        <svg class="pm__ic draw" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="14" width="40" height="38" rx="6"/><path d="M12 26h40M22 8v12M42 8v12"/><path d="M24 36l16 10M40 36L24 46"/></svg>
-        <h3>長い縛りはありません</h3>
-        <p>制作費だけの買い切りでもOK。月額サポートは長期の契約ではなく、いつでもやめられます。</p>
-      </li>
-      <li class="pm__item fade" style="--i:2">
-        <span class="pm__no">03</span>
-        <svg class="pm__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 52h44"/><path d="M16 52V36M28 52V26M40 52V32M52 52V18"/><path d="M14 26l12-10 10 6 16-12"/></svg>
-        <h3>結果は、数字で正直にご報告</h3>
-        <p>問い合わせの件数や、お客さんがどこから来たかを数字でお伝えし、次に何をするかをいっしょに決めます。</p>
-      </li>
-      <li class="pm__item fade" style="--i:3">
-        <span class="pm__no">04</span>
-        <svg class="pm__ic draw" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l20 8v16c0 13-9 22-20 28C21 52 12 43 12 30V14z"/><path d="M23 31l7 7 12-14"/></svg>
-        <h3>Googleの規約と法律を守った集客</h3>
-        <p>口コミのお願いのしかたや、料金・効果の書き方も、Googleのルールや景品表示法などの法律に沿って行います。</p>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- 流れる文字の帯（区切り） -->
-<div class="mq" data-mq aria-hidden="true">
-  <div class="mq__track"><div class="mq__set"><b>見つけてもらう</b><i></i><b>伝わる</b><i></i><b>迷わず連絡できる</b><i></i><b>Harukaze Works</b><i></i></div></div>
-</div>
-<div class="mq__ctrl"><button class="mq__btn" type="button" aria-pressed="false" data-mq-pause>流れる文字を止める</button></div>
-
-<!-- ============ 9. ご依頼の流れ（風の道が伸びる） ============ -->
-<section class="sec flow" id="flow">
-  <div class="wrap">
-    <header class="st st--c">
-      <p class="st__en fade">Flow</p>
-      <h2 class="st__jp fade">ご依頼の流れ</h2>
-      <p class="st__lead fade">サンプルを見てから決められます。<br class="sp-only">最短<span class="mark">3日</span>で公開できます。</p>
-    </header>
-    <div class="road road--5" id="road">
-      <svg class="road__svg" viewBox="0 0 1000 184" preserveAspectRatio="none" aria-hidden="true">
-        <path class="road__bg" d="M0 32 H100 C 200 32 200 152 300 152 C 400 152 400 32 500 32 C 600 32 600 152 700 152 C 800 152 800 32 900 32 H1000"/>
-        <path class="road__v" pathLength="1" d="M0 32 H100 C 200 32 200 152 300 152 C 400 152 400 32 500 32 C 600 32 600 152 700 152 C 800 152 800 32 900 32 H1000"/>
-      </svg>
-      <ol class="road__steps">
-        <li class="step"><span class="step__dot">1</span><h3>無料サンプル</h3><p>LINE・メール・お電話でご連絡ください。今のホームページやGoogleマップを「第一印象チェック」して、サンプルサイトを無料でおつくりします。</p></li>
-        <li class="step"><span class="step__dot">2</span><h3>プランを選ぶ</h3><p>サンプルをご覧いただき、ご納得いただけたら、ライト・スタンダード・プレミアムからお選びください。</p></li>
-        <li class="step"><span class="step__dot">3</span><h3>制作</h3><p>写真と情報をLINEで送っていただくだけでOK。紹介文はお話をうかがってこちらでつくります。修正は何度でもご対応します。</p></li>
-        <li class="step"><span class="step__dot">4</span><h3>公開</h3><p>ご確認いただいてから公開します。お写真と情報がそろえば、最短3日で公開できます。</p></li>
-        <li class="step"><span class="step__dot">5</span><h3>月額は任意</h3><p>更新やGoogleマップの運用をまかせたいときだけ、月額サポートをお選びください。いつでもやめられます。</p></li>
-      </ol>
-    </div>
-    <div class="hojo fade">
-      <svg class="hojo__ic" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="6" width="30" height="36" rx="4"/><path d="M15 15h18M15 22h18M15 29h10"/><circle cx="34" cy="34" r="7"/><path d="M31 34l2 2 4-4"/></svg>
-      <p><b>補助金を使ったご依頼もできます。</b>荒川区の「ホームページ作成補助金」や「小規模事業者持続化補助金」を使ったご依頼にも対応しています。<small>※ 申請書の作成は行っておりません。対象になるかどうかは、各制度の募集案内でご確認ください。</small></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 10. よくある質問 ============ -->
-<section class="sec faq" id="faq">
-  <div class="wrap faq__wrap">
-    <header class="st st--c">
-      <p class="st__en fade">FAQ</p>
-      <h2 class="st__jp fade">よくあるご質問</h2>
-    </header>
-    <div class="faq__list">
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>成果は保証されますか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>検索の順位や問い合わせの数は、Googleの仕組みやお店の状況によって変わるため、数値のお約束はしていません。そのかわり、やったことと問い合わせの件数などを数字でご報告し、結果を見ながら改善をいっしょに続けます。</p></div></div></div>
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>パソコンが苦手でも大丈夫ですか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>大丈夫です。写真と一言をLINEで送っていただければ、こちらで文章を整えて反映します。制作から公開後の更新まで、制作者が直接対応します。</p></div></div></div>
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>途中でやめられますか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>はい。月額サポートは長期の契約ではないので、いつでもやめられます。制作費だけの買い切りなら、月々の費用はかかりません。アカウントはお客様の名義なので、やめたあともそのままお使いいただけます。</p></div></div></div>
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>他社が作ったホームページでも頼めますか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>はい。Googleマップの整備や、アクセス解析の後付け（他社が作ったHP向け）など、今のホームページを活かしたご依頼もできます。作り直すかどうかも含めて、お気軽にご相談ください。</p></div></div></div>
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>サンプルは本当に無料ですか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>はい、第一印象チェックもサンプル制作も無料です。サンプルをご覧いただき、気に入っていただけたらそのままご依頼いただけます。</p></div></div></div>
-      <div class="qa fade"><button class="qa__q" type="button" aria-expanded="false"><span class="qa__mk">Q</span><span>修正は何回までできますか？</span><i aria-hidden="true"></i></button><div class="qa__a"><div class="qa__in"><p>デザインや文章の修正は、回数の制限なくご対応します。ページの追加は1ページ5,000円、サイトの構成を大きく変える場合は、別途ご相談させてください。</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 11. プロフィール ============ -->
+<!-- ===== 2. Harukaze Works について ===== -->
 <section class="sec about" id="about">
-  <div class="wrap about__wrap">
-    <div class="about__vis fade">
-      <div class="about__face"><img src="images/profile.jpg" alt="山口 泰平の写真" width="600" height="600" loading="lazy" onerror="this.parentElement.classList.add('photo-empty');this.remove();"></div>
-      <svg class="about__ring" viewBox="0 0 300 300" aria-hidden="true"><defs><path id="ring2" d="M150,150 m-132,0 a132,132 0 1,1 264,0 a132,132 0 1,1 -264,0"/></defs><text><textPath href="#ring2">Hello! ・ Harukaze Works ・ Hello! ・ Harukaze Works ・ </textPath></text></svg>
-      <svg class="about__leaf" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="wrap about__in">
+    <div class="about__num">
+      <p class="about__lb a03e">中小企業の事業計画書</p>
+      <p class="about__big a03e" style="--d:.15s"><span class="about__n" data-count="150">150</span><span class="about__unit">本以上</span></p>
+      <ul class="about__facts a03e" style="--d:.3s">
+        <li>中小企業の事業計画書を150本以上</li>
+        <li>企業法務の経験</li>
+        <li>宅地建物取引士</li>
+      </ul>
     </div>
-    <div class="letter fade">
-      <p class="st__en">About</p>
-      <h2 class="letter__name">山口 泰平<small>Taihei Yamaguchi</small></h2>
-      <p class="letter__role">Harukaze Works 代表</p>
-      <ul class="letter__cred"><li>本業は企業法務</li><li>宅建士（宅地建物取引士）</li></ul>
-      <p>1988年生まれ、2児の父。お店や会社がせっかく良い仕事をしていても、検索で見つからなければ知ってもらえない。そんなもったいなさをなくしたくて、ホームページ制作を始めました。</p>
-      <p>本業は、企業の法務部で契約や法律に関わる仕事をしています。その視点から、Googleの規約や法律を守った運用を大切にしています。</p>
-      <p>制作から公開後の更新まで、私が直接対応しますので、「パソコンは苦手」という方もご安心ください。メニューや営業時間の変更は、LINEで写真と一言を送っていただくだけで反映します。</p>
-      <p class="letter__sign">Harukaze Works<span>山口 泰平</span></p>
+    <div class="about__txt">
+      <p class="lb a03e">Harukaze Works について</p>
+      <h2 class="h2 a03e" style="--d:.15s">事業計画書を150本以上書いてきた、<br class="br-pc">ウェブ担当です。</h2>
+      <p class="a03e" style="--d:.3s">小さなお店や会社のホームページは、何を書くかで決まります。事業計画書を書くときと同じように、まずお話を伺い、<br><span class="nowrap">お店の強みを整理してから、ページにします。</span></p>
+      <div class="about__me a03e" style="--d:.45s">
+        <img src="images/profile_c.jpg" width="480" height="480" alt="山口泰平の写真" loading="lazy" decoding="async">
+        <p><b>山口 泰平</b><span>Harukaze Works 代表<i class="sl">／</i><br class="br-sp">宅地建物取引士</span></p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 12. お問い合わせ（このページで唯一の濃い色面） ============ -->
-<section class="sec contact" id="contact">
+<!-- ===== 3. できること ===== -->
+<section class="sec svc" id="service">
   <div class="wrap">
-    <div class="cta">
-      <div class="leaves leaves--cta" aria-hidden="true">
-        <svg style="--x:10%;--d:21s;--dl:-3s;--s:.7"><use href="#leaf"/></svg>
-        <svg style="--x:46%;--d:27s;--dl:-10s;--s:.5"><use href="#leaf"/></svg>
-        <svg style="--x:80%;--d:24s;--dl:-6s;--s:.8"><use href="#leaf"/></svg>
+    <p class="lb a03e">できること</p>
+    <h2 class="h2 a03e" style="--d:.15s">ホームページを中心に、<br class="br-sp">お店のネットの入口を整えます。</h2>
+  </div>
+  <div class="svc__in">
+    <div class="svc__main">
+      <div class="svc__pic">
+        <img class="a03e" src="images/svc_hp_sp.jpg" width="600" height="1298" alt="制作したサイトのスマホ表示：Sunny Care～こころ～" loading="lazy" decoding="async">
       </div>
-      <p class="st__en">Contact</p>
-      <h2 class="cta__h">まずは、無料の<br class="sp-only">サンプルから。</h2>
-      <p class="cta__lead">第一印象チェック・サンプル制作・ご相談は無料です。<br class="pc">ご都合のよい方法でご連絡ください。</p>
-      <div class="ways">
-        <a class="way way--line" href="https://lin.ee/rZupack" target="_blank" rel="noopener" data-track="line" data-pos="contact">
-          <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/><path d="M8.5 9.5v3h1.6M12 9.5v3M14 12.5v-3l2 3v-3"/></svg>
-          <span class="way__body"><span class="way__en">LINE<em class="way__tag">いちばん気軽</em></span><span class="way__v">LINEで無料サンプル依頼</span><span class="way__s">友だち追加して、そのままトークでご相談ください。ひと言からでも大丈夫です。</span></span>
-          <span class="way__go" aria-hidden="true">友だち追加<svg><use href="#arw"/></svg></span>
-        </a>
-        <a class="way" href="mailto:taihei@harukaze-hp.com" data-track="mail" data-pos="contact">
-          <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg>
-          <span class="way__en">Mail</span><span class="way__v">taihei@harukaze-hp.com</span><span class="way__s">メールで相談する</span>
-        </a>
-        <a class="way" href="tel:08041397584" data-track="tel" data-pos="contact">
-          <svg class="way__ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h3l2 5-2.5 1.5a11 11 0 005 5L16 12l5 2v3a2 2 0 01-2 2A16 16 0 015 5a2 2 0 012-2z"/></svg>
-          <span class="way__en">Tel</span><span class="way__v">080-4139-7584</span><span class="way__s">電話で相談する</span>
-        </a>
+      <div class="svc__body">
+        <p class="svc__en a03e">Website</p>
+        <h3 class="h3 a03e" style="--d:.1s">ホームページ</h3>
+        <p class="a03e" style="--d:.2s">お店の強みを整理し、初めて見る人の疑問の順にページを組み立てます。完成イメージは3パターン。スマホで動かして比べてから選べます。</p>
+        <p class="svc__price a03e" style="--d:.3s"><b>5</b>万円〜<small>（税込・1ページから）</small></p>
       </div>
-      <p class="ways__sub">
-        <a href="https://www.instagram.com/harukaze_works/" target="_blank" rel="noopener" data-track="instagram" data-pos="contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>InstagramのDM（@harukaze_works）</a>
-        <a href="#form" data-form-open><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>フォーム（24時間受付）</a>
-      </p>
     </div>
-
-    <details class="formbox" id="form">
-      <summary>フォームで相談する<small>24時間受付</small></summary>
-      <form class="form" action="https://formspree.io/f/xojoneqq" method="POST" data-track-form>
-        <label class="fld"><span>お名前・お店/会社名</span><input type="text" name="name" required autocomplete="name"></label>
-        <label class="fld"><span>メールアドレス</span><input type="email" name="email" required autocomplete="email"></label>
-        <label class="fld"><span>ご相談内容</span><textarea name="message" rows="5" required></textarea></label>
-        <p class="form__note">送信いただいた内容は、ご相談への回答とサンプル制作のご案内に使います。くわしくは<a href="privacy/">プライバシーポリシー</a>をご覧ください。</p>
-        <button class="btn btn--big mag" type="submit"><span>送信する</span><i class="btn__ic"><svg><use href="#arw"/></svg></i></button>
-      </form>
-    </details>
+    <ul class="svc__sub">
+      <li class="a03e">
+        <h3>Googleマップの整備</h3>
+        <p>お店の情報・写真・営業時間を整え、地図で探す人にきちんと届く形にします。</p>
+        <p class="svc__p">1万円<small>（ホームページと同時なら5,000円）</small></p>
+      </li>
+      <li class="a03e" style="--d:.15s">
+        <h3>LINE公式の立ち上げ</h3>
+        <p>アカウントの開設から、あいさつ文・メニューの設定までまとめて行います。</p>
+        <p class="svc__p">1.5万円<small>（LINE公式はじめてセット）</small></p>
+      </li>
+      <li class="a03e" style="--d:.3s">
+        <h3>月々の運用</h3>
+        <p>ホームページの更新、Googleマップの運用、LINEの配信を、ご希望に合わせてお手伝いします。</p>
+        <p class="svc__p">月1,000円〜<small>（ご希望の方だけ）</small></p>
+      </li>
+    </ul>
   </div>
 </section>
+
+<!-- ===== 4. 3つの強み ===== -->
+<section class="sec str" id="strength">
+  <div class="wrap">
+    <p class="lb a03e">Harukaze Works の3つの強み</p>
+  </div>
+
+  <article class="str__row">
+    <figure class="str__pic"><img src="images/photo_sketch.jpg" width="1600" height="1067" alt="" loading="lazy" decoding="async"></figure>
+    <div class="str__body">
+      <p class="str__no a03e">01</p>
+      <h3 class="h2 a03e" style="--d:.1s">事業から考えます。</h3>
+      <p class="a03e" style="--d:.2s">事業計画書を150本以上書いてきたやり方で、お話からお店の強みを整理し、伝える順番を決めてからページにします。見た目より先に、何を書くかを決めます。</p>
+    </div>
+  </article>
+
+  <article class="str__row str__row--r">
+    <div class="str__tones" aria-label="同じお店を3つのデザインで作った見本">
+      <figure class="str__tone str__tone--1 a03e"><img src="images/tone_natural.jpg" width="480" height="1000" alt="見本：やさしいデザイン" loading="lazy" decoding="async"><figcaption>やさしい</figcaption></figure>
+      <figure class="str__tone str__tone--2 a03e" style="--d:.15s"><img src="images/tone_stylish.jpg" width="480" height="1000" alt="見本：スタイリッシュなデザイン" loading="lazy" decoding="async"><figcaption>スタイリッシュ</figcaption></figure>
+      <figure class="str__tone str__tone--3 a03e" style="--d:.3s"><img src="images/tone_wa.jpg" width="480" height="1000" alt="見本：和風のデザイン" loading="lazy" decoding="async"><figcaption>和風</figcaption></figure>
+    </div>
+    <div class="str__body">
+      <p class="str__no a03e">02</p>
+      <h3 class="h2 a03e" style="--d:.1s">3つのデザインから選べます。</h3>
+      <p class="a03e" style="--d:.2s">完成イメージを3パターン、スマホで動かして比べてから選べます。写真は架空の定食屋「こもれび食堂」で作った見本です。</p>
+    </div>
+  </article>
+
+  <article class="str__row">
+    <figure class="str__pic"><img src="images/photo_desk.jpg" width="1600" height="1065" alt="" loading="lazy" decoding="async"></figure>
+    <div class="str__body">
+      <p class="str__no a03e">03</p>
+      <h3 class="h2 a03e" style="--d:.1s">作ったあとも、身近に相談できます。</h3>
+      <p class="a03e" style="--d:.2s">公開したあとの小さな直しも、LINEで気軽にご相談ください。サイトの名義はお客様。長い契約の縛りはなく、月額はご希望の方だけです。</p>
+    </div>
+  </article>
+</section>
+
+<!-- ===== 5. 進め方 ===== -->
+<section class="sec flow" id="flow">
+  <div class="wrap flow__in">
+    <div class="flow__head">
+      <p class="lb a03e">進め方</p>
+      <h2 class="h2 a03e" style="--d:.15s">お話を伺うところから、<br>公開したあとまで。</h2>
+      <p class="a03e" style="--d:.3s">完成までの期間の目安は1〜3週間です。</p>
+    </div>
+    <div class="flow__list">
+      <span class="flow__line m01e" aria-hidden="true"></span>
+      <ol>
+        <li class="a03e">
+          <p class="flow__no">00</p>
+          <div>
+            <h3>お話を伺います</h3>
+            <p>お店のこと、お客様のこと、これからやりたいことを伺います。困っていることも、まとまっていなくて大丈夫です。</p>
+            <p class="flow__note"><span>Harukaze Works では</span>原稿がなくても大丈夫です。</p>
+          </div>
+        </li>
+        <li class="a03e">
+          <p class="flow__no">01</p>
+          <div>
+            <h3>強みを整理します</h3>
+            <p>伺ったお話から、お店が選ばれている理由を言葉にします。事業計画書を書くときと同じ手順で、伝える中身を決めます。</p>
+            <p class="flow__note"><span>Harukaze Works では</span>紹介文はこちらで書き起こします。</p>
+          </div>
+        </li>
+        <li class="a03e">
+          <p class="flow__no">02</p>
+          <div>
+            <h3>ページの順番を決めます</h3>
+            <p>初めて見る人の疑問の順に、ページの並びを組み立てます。読んだ人が迷わずに連絡まで進める形にします。</p>
+          </div>
+        </li>
+        <li class="a03e">
+          <p class="flow__no">03</p>
+          <div>
+            <h3>3つのデザインで形にします</h3>
+            <p>完成イメージを3パターン作ります。スマホで動かして比べてから、1つを選んでいただきます。</p>
+            <p class="flow__note"><span>Harukaze Works では</span>公開前の修正は、回数の制限がありません。</p>
+          </div>
+        </li>
+        <li class="a03e">
+          <p class="flow__no">04</p>
+          <div>
+            <h3>公開します</h3>
+            <p>選んだデザインで仕上げて、公開します。公開したら、お店のURLをお渡しします。</p>
+            <p class="flow__note"><span>Harukaze Works では</span>お支払いは完成後です。</p>
+          </div>
+        </li>
+        <li class="a03e">
+          <p class="flow__no">05</p>
+          <div>
+            <h3>一緒に育てます</h3>
+            <p>公開後の更新や、Googleマップ・LINEの運用もご相談いただけます。月々のお手伝いは、ご希望の方だけです。</p>
+            <p class="flow__note"><span>Harukaze Works では</span>名義はお客様。契約の縛りはありません。</p>
+          </div>
+        </li>
+      </ol>
+      <p class="flow__cta a03e"><a class="btn btn--fill" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む<i aria-hidden="true">→</i></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. 制作事例 ===== -->
+<section class="sec works" id="works">
+  <div class="wrap">
+    <p class="lb a03e">制作事例</p>
+    <h2 class="h2 a03e" style="--d:.15s">作ったホームページ</h2>
+  </div>
+
+  <article class="wk wk--main">
+    <figure class="wk__pic"><img src="images/work_kosugi.jpg" width="1800" height="1125" alt="小杉結ヴァイオリン教室のホームページ" loading="lazy" decoding="async"></figure>
+    <div class="wk__body">
+      <p class="wk__cat a03e">ヴァイオリン教室・演奏活動</p>
+      <h3 class="h3 a03e" style="--d:.1s">小杉結ヴァイオリン教室</h3>
+      <dl class="wk__ba a03e" style="--d:.2s">
+        <div><dt>困っていたこと</dt><dd>無料のホームページ作成サービスのアドレスのままで、演奏会の情報があちこちのページに分かれていた。</dd></div>
+        <div><dt>こう変わった</dt><dd>演奏会・レッスン・ブログを1つのサイトにまとめ、演奏会の予定がトップからすぐに分かる形に。</dd></div>
+      </dl>
+      <a class="more a03e" style="--d:.3s" href="https://yui-kosugi.com/" target="_blank" rel="noopener">サイトを見る<i aria-hidden="true">↗</i></a>
+    </div>
+  </article>
+
+  <div class="wk__pair">
+    <article class="wk wk--s1">
+      <figure class="wk__pic"><img src="images/work_sunny.jpg" width="1200" height="750" alt="Sunny Care～こころ～のホームページ" loading="lazy" decoding="async"></figure>
+      <p class="wk__cat a03e">リラクゼーション</p>
+      <h3 class="h3 a03e">Sunny Care～こころ～</h3>
+      <dl class="wk__ba a03e">
+        <div><dt>困っていたこと</dt><dd>固定の店舗を持たない施術で、場所と予約の方法が伝わりにくかった。</dd></div>
+        <div><dt>こう変わった</dt><dd>お店のドメインで公開し、メニュー・場所・予約の方法を1つの流れで読める形に。</dd></div>
+      </dl>
+      <a class="more a03e" href="https://sunny-care-cocoro.com/" target="_blank" rel="noopener">サイトを見る<i aria-hidden="true">↗</i></a>
+    </article>
+    <article class="wk wk--s2">
+      <figure class="wk__pic"><img src="images/work_lunon.jpg" width="1200" height="750" alt="lunon balletのホームページ" loading="lazy" decoding="async"></figure>
+      <p class="wk__cat a03e">大人のバレエサークル</p>
+      <h3 class="h3 a03e">lunon ballet</h3>
+      <dl class="wk__ba a03e">
+        <div><dt>困っていたこと</dt><dd>Instagram は毎月動いているのに、ホームページは2024年から止まっていた。</dd></div>
+        <div><dt>こう変わった</dt><dd>クラス・料金・発表会の歩みを1つにまとめ、毎月の予定は Instagram へ案内する形に。</dd></div>
+      </dl>
+      <a class="more a03e" href="https://lunon-ballet.netlify.app/" target="_blank" rel="noopener">サイトを見る<i aria-hidden="true">↗</i></a>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 7. 料金 ===== -->
+<section class="sec price" id="price">
+  <div class="wrap">
+    <p class="price__big a03e" aria-hidden="true"><b>5</b>万円〜</p>
+    <p class="lb lb--w a03e">料金</p>
+    <h2 class="h2 a03e" style="--d:.15s">ホームページは、5万円から。<br>お支払いは完成後です。</h2>
+
+    <h3 class="price__h a03e">つくる</h3>
+    <ul class="plans">
+      <li class="plan a03e">
+        <p class="plan__n">ライト</p>
+        <p class="plan__p"><b>5</b>万円</p>
+        <p class="plan__pg">1ページ</p>
+        <p class="plan__d">まずは1ページで、お店の顔をつくりたい方に。</p>
+      </li>
+      <li class="plan plan--rec a03e" style="--d:.15s">
+        <p class="plan__n">スタンダード<span class="plan__tag">おすすめ</span></p>
+        <p class="plan__p"><b>7.8</b>万円</p>
+        <p class="plan__pg">3〜5ページ</p>
+        <p class="plan__d">メニュー・料金・アクセスなどを、ページを分けてしっかり伝えたい方に。</p>
+      </li>
+      <li class="plan a03e" style="--d:.3s">
+        <p class="plan__n">プレミアム</p>
+        <p class="plan__p"><b>12.8</b>万円</p>
+        <p class="plan__pg">6ページ〜</p>
+        <p class="plan__d">こだわりや物語まで伝えたい方に。</p>
+        <!-- 要確認：プレミアムだけに付くもの（2026-10-18 の 9.8万円のときの内容を仮に載せている） -->
+        <p class="plan__only">プレミアムだけ：Googleマップの整備・アクセス解析の設定</p>
+      </li>
+    </ul>
+    <p class="price__note a03e">どのプランも、紹介文の作成・3パターンのデザイン・スマホ対応が入っています。ページの追加は1ページ5,000円。金額はすべて税込です。</p>
+
+    <div class="price__more">
+      <div class="a03e">
+        <h3 class="price__h">足す</h3>
+        <dl class="rows">
+          <div><dt>Googleマップの整備</dt><dd>1万円<small>ホームページと同時なら5,000円</small></dd></div>
+          <div><dt>LINE公式はじめてセット</dt><dd>1.5万円</dd></div>
+          <div><dt>口コミの集め方キット</dt><dd>5,000円</dd></div>
+          <div><dt>アクセス解析の後付け</dt><dd>2万円</dd></div>
+        </dl>
+      </div>
+      <div class="a03e" style="--d:.15s">
+        <h3 class="price__h">育てる<small>月額・ご希望の方だけ</small></h3>
+        <dl class="rows">
+          <div><dt>更新サポート</dt><dd>月1,000〜3,000円</dd></div>
+          <div><dt>Googleマップの運用</dt><dd>月5,000円</dd></div>
+          <div><dt>LINE配信の代行</dt><dd>月5,000円／1万円</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. よくある質問 ===== -->
+<section class="sec faq" id="faq">
+  <div class="wrap wrap--s">
+    <p class="lb a03e">よくある質問</p>
+    <h2 class="h2 a03e" style="--d:.15s">はじめての方から、<br class="br-sp">よくいただく質問</h2>
+    <div class="faq__list a03e" style="--d:.3s">
+      <details>
+        <summary>原稿がなくても頼めますか？</summary>
+        <p>はい、大丈夫です。お話を伺って、紹介文はこちらで書き起こします。どのプランにも入っています。</p>
+      </details>
+      <details>
+        <summary>自分で更新できますか？</summary>
+        <p>更新はLINEでご依頼いただければ、こちらで行います（更新サポート 月1,000円〜）。ご自身で更新したいところがあれば、作る前にご相談ください。</p>
+      </details>
+      <details>
+        <summary>月額は必ず必要ですか？</summary>
+        <p>いいえ。月々のお手伝いはご希望の方だけです。作って終わりの買い切りでも、お使いいただけます。</p>
+      </details>
+      <details>
+        <summary>補助金の申請も頼めますか？</summary>
+        <p>申請書の作成や申請の代行は行っていません。補助金を使ってホームページを作りたい場合は、お気軽にご相談ください。</p>
+      </details>
+      <details>
+        <!-- 要確認：遠方の方への対応（山口さんの確認待ち） -->
+        <summary>遠方でも頼めますか？</summary>
+        <p>やり取りはLINEとメールで進められるので、遠方の方もご相談ください。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. 無料サンプルの案内 ===== -->
+<section class="sec cta" id="contact">
+  <div class="wrap cta__in">
+    <p class="lb lb--w a03e">無料サンプル</p>
+    <h2 class="cta__h a03e" style="--d:.15s">まずは無料で、<br>あなたのお店の<br class="br-sp">サンプルを作ります。</h2>
+    <p class="a03e" style="--d:.3s">LINEで「無料サンプル」と送るだけ。お店の名前と、今あるホームページやSNSを教えてください。</p>
+    <p class="cta__btn a03e" style="--d:.45s"><a class="btn btn--w" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む<i aria-hidden="true">→</i></a></p>
+    <ul class="cta__sub a03e" style="--d:.6s">
+      <li><small>お電話</small><a href="tel:08041397584">080-4139-7584</a></li>
+      <li><small>メール</small><a href="mailto:taihei@harukaze-hp.com">taihei@harukaze-hp.com</a></li>
+    </ul>
+  </div>
+</section>
+
 </main>
 
 <footer class="ft">
-  <svg class="wave wave--ft" viewBox="0 0 2880 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 0 720 40 S 1200 80 1440 40 S 1920 0 2160 40 S 2640 80 2880 40 V80 H0Z"/></svg>
   <div class="wrap ft__in">
-    <a class="logo" href="#top"><img src="images/logo_full_web.png" alt="Harukaze Works WEB DESIGN STUDIO" width="775" height="180" loading="lazy"></a>
-    <p class="ft__desc">小さなお店・会社のホームページ制作</p>
-    <nav class="ft__nav" aria-label="フッターメニュー"><a href="#worry">お困りごと</a><a href="#journey">集客の道すじ</a><a href="#pillars">3本柱</a><a href="#check">第一印象チェック</a><a href="#industry">業種別のご案内</a><a href="koumuten/">工務店・リフォームの方へ</a><a href="#works">制作実績</a><a href="#price">料金</a><a href="#promise">安心の約束</a><a href="#flow">流れ</a><a href="#faq">よくある質問</a><a href="#about">制作者</a><a href="#contact">お問い合わせ</a><a href="privacy/">プライバシーポリシー</a></nav>
-    <p class="ft__copy">© 2026 Harukaze Works　harukaze-works.com</p>
+    <div class="ft__brand">
+      <img src="images/logo_full_web.png" width="775" height="180" alt="Harukaze Works" loading="lazy">
+      <p>小さなお店・会社のホームページ・Googleマップ・LINE</p>
+    </div>
+    <nav class="ft__nav" aria-label="フッターのメニュー">
+      <a href="#service">サービス</a><a href="#flow">進め方</a><a href="#price">料金</a>
+      <a href="#works">制作事例</a><a href="#about">Harukaze Works について</a><a href="#faq">よくある質問</a>
+      <a href="privacy/">プライバシーポリシー</a>
+    </nav>
+    <div class="ft__contact">
+      <a href="tel:08041397584">080-4139-7584</a>
+      <a href="mailto:taihei@harukaze-hp.com">taihei@harukaze-hp.com</a>
+      <a href="https://www.instagram.com/harukaze_works/" target="_blank" rel="noopener">Instagram @harukaze_works</a>
+    </div>
   </div>
+  <p class="ft__copy">© Harukaze Works</p>
 </footer>
 
-<a class="totop" href="#top" aria-label="ページの先頭へ"><svg><use href="#arw"/></svg></a>
+<div class="spbar"><a href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む</a></div>
 
-<!-- 固定の問い合わせボタン（中で文字が流れる。ヒーローを過ぎたら出し、お問い合わせ欄が見えている間は隠す） -->
-<a class="u5" href="https://lin.ee/rZupack" target="_blank" rel="noopener" aria-label="LINEで無料サンプル依頼（友だち追加）" data-track="line" data-pos="fab">
-  <svg class="u5__ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4.97 0-9 3.13-9 7 0 2.3 1.43 4.34 3.64 5.62L6 20l3.9-2.2c.68.13 1.38.2 2.1.2 4.97 0 9-3.13 9-7s-4.03-7-9-7z"/></svg>
-  <span class="u5__win" aria-hidden="true"><span class="u5__track"><span class="u5__set">LINEで無料サンプル依頼<i></i>第一印象チェックも無料<i></i></span><span class="u5__set">LINEで無料サンプル依頼<i></i>第一印象チェックも無料<i></i></span></span><span class="u5__still">LINEで無料サンプル依頼</span></span>
-</a>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="arw" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="leaf" viewBox="0 0 40 40"><g transform="translate(20 20)" fill="currentColor"><ellipse cy="-10" rx="6" ry="9"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(72)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(144)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(216)"/><ellipse cy="-10" rx="6" ry="9" transform="rotate(288)"/></g><circle cx="20" cy="20" r="4" fill="#f7f5f0"/></symbol>
-</svg>
-<script src="js/main.js?v=20261027"></script>
-<script src="js/hero.js?v=20261027"></script>
+<script src="js/v3.js?v=20261116"></script>
 </body>
 </html>
