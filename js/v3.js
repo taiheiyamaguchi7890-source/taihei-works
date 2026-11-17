@@ -96,56 +96,30 @@
     img.addEventListener('error', function () { if (img.parentNode) img.parentNode.classList.add('photo-empty'); });
   });
 
-  /* ---------- ヒーロー：開幕・画面の入れ替わり・止めるボタン・奥行き ---------- */
+  /* ---------- ヒーロー：開幕（同じタブで2回目からは完成形） ---------- */
   var hero = $('#hero');
-  if (!hero) return;
-  var phs = $$('.hero__ph', hero), cur = 0, timer = null, armed = false, vis = true, paused = false;
-  var btn = $('.hero__pause', hero);
-  function next() {
-    if (phs.length < 2) return;
-    var j = (cur + 1) % phs.length;
-    var img = $('img', phs[j]); if (img && img.loading === 'lazy') img.loading = 'eager';
-    phs.forEach(function (p) { p.classList.remove('is-prev'); });
-    phs[cur].classList.remove('is-on', 'is-anim'); phs[cur].classList.add('is-prev');
-    void phs[j].offsetWidth; phs[j].classList.add('is-on', 'is-anim'); cur = j;
-  }
-  function start() { if (armed && !timer && vis && !paused && !document.hidden) timer = setInterval(next, 7500); }
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  function arm() { armed = true; stop(); start(); }
-  // 2枚目以降を先に読み込んでおく（入れ替わりで空の画面を出さない）
-  addEventListener('load', function () { phs.forEach(function (p) { var i = $('img', p); if (i && i.loading === 'lazy') i.loading = 'eager'; }); });
-  if (hasIO) new IntersectionObserver(function (es) { vis = es[0].isIntersecting; hero.classList.toggle('is-off', !vis); vis ? start() : stop(); }, { threshold: 0 }).observe(hero);
-  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
-  if (btn) btn.addEventListener('click', function () {
-    paused = !paused;
-    btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
-    btn.setAttribute('aria-label', paused ? '画面の入れ替わりを再生する' : '画面の入れ替わりを止める');
-    $('.hero__pause-t', btn).textContent = paused ? '再生' : '止める';
-    hero.classList.toggle('is-paused', paused);
-    paused ? stop() : start();
-  });
-
-  var once = hero.getAttribute('data-once'), seen = false;
-  try { seen = !!sessionStorage.getItem(once); } catch (e) {}
-  if (reduce || seen) { hero.classList.add('is-static', 'is-done'); arm(); }
-  else {
-    try { sessionStorage.setItem(once, '1'); } catch (e) {}
-    hero.classList.add('is-play');
-    setTimeout(function () { hero.classList.add('is-done'); }, 4600);
-    setTimeout(arm, 6000);
+  if (hero) {
+    var once = hero.getAttribute('data-once'), seen = false;
+    try { seen = !!sessionStorage.getItem(once); } catch (e) {}
+    if (reduce || seen) hero.classList.add('is-static');
+    else { try { sessionStorage.setItem(once, '1'); } catch (e) {} hero.classList.add('is-play'); }
   }
 
-  if (!reduce) {
-    var copy = $('.hero__copy', hero), pics = $('.hero__photos', hero), ticking = false;
-    var depth = function () {
-      ticking = false;
-      if (innerWidth < 768) { copy.style.transform = ''; copy.style.opacity = ''; pics.style.transform = ''; return; }
-      var r = hero.getBoundingClientRect(); if (r.bottom < 0) return;
-      var p = Math.max(0, Math.min(1, -r.top / (r.height || 1)));
-      pics.style.transform = 'translateY(' + (p * 18).toFixed(2) + '%)';
-      copy.style.transform = 'translateY(' + (-p * 60).toFixed(1) + 'px)';
-      copy.style.opacity = String(Math.max(0.05, 1 - p * 1.1));
-    };
-    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(depth); } }, { passive: true });
+  /* ---------- 作品の帯：止めるボタン・画面外とタブ非表示で止める ---------- */
+  var strip = $('.strip');
+  if (strip && !reduce) {
+    var sbtn = $('.strip__pause', strip), paused = false;
+    if (hasIO) new IntersectionObserver(function (es) { strip.classList.toggle('is-off', !es[0].isIntersecting); }, { threshold: 0 }).observe(strip);
+    document.addEventListener('visibilitychange', function () { strip.classList.toggle('is-off', document.hidden); });
+    if (sbtn) sbtn.addEventListener('click', function () {
+      paused = !paused;
+      sbtn.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      sbtn.setAttribute('aria-label', paused ? '作品の帯を動かす' : '作品の帯の動きを止める');
+      $('.strip__pause-t', sbtn).textContent = paused ? '動かす' : '止める';
+      strip.classList.toggle('is-paused', paused);
+    });
+    // キーボードで作品にフォーカスしたら止める（読めるように）
+    strip.addEventListener('focusin', function () { strip.classList.add('is-paused'); });
+    strip.addEventListener('focusout', function () { if (!paused) strip.classList.remove('is-paused'); });
   }
 })();
