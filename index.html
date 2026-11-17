@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/v3.css?v=20261116">
+<link rel="stylesheet" href="css/v3.css?v=20261117">
 <script>
   if (location.hostname === 'harukaze-works.com' || location.hostname === 'www.harukaze-works.com') {
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-4KQBRTQCSQ'; document.head.appendChild(s);
@@ -57,45 +57,81 @@
 
 <main id="main">
 
-<!-- ===== 1. ヒーロー ===== -->
-<section class="hero" id="hero" data-once="hw-hero" aria-label="Harukaze Works">
-  <div class="hero__bgtext" aria-hidden="true">
-    <span>ホームページ　Googleマップ　LINE　小さなお店の、身近なウェブ担当。</span>
-    <span>お話を伺い、強みを整理して、ページにする。ホームページ　Googleマップ</span>
-    <span>LINE　小さなお店の、身近なウェブ担当。お話を伺い、強みを整理して、</span>
-    <span>ページにする。ホームページ　Googleマップ　LINE　小さなお店の、身近な</span>
-    <span>ウェブ担当。お話を伺い、強みを整理して、ページにする。ホームページ　</span>
-    <span>Googleマップ　LINE　小さなお店の、身近なウェブ担当。お話を伺い、強み</span>
-  </div>
-
-  <div class="hero__shape">
-    <div class="hero__reveal">
-      <div class="hero__photos">
-        <figure class="hero__ph is-on sp-r"><img src="images/hero_kosugi.jpg" width="2000" height="1250" alt="制作したサイト：小杉結ヴァイオリン教室" decoding="async" fetchpriority="high"></figure>
-        <figure class="hero__ph sp-r"><img src="images/hero_sunny.jpg" width="2000" height="1250" alt="制作したサイト：Sunny Care～こころ～" decoding="async"></figure>
-        <figure class="hero__ph"><img src="images/hero_lunon.jpg" width="2000" height="1250" alt="制作したサイト：lunon ballet" decoding="async" loading="lazy"></figure>
-      </div>
-    </div>
-  </div>
-  <svg class="hero__clip" width="0" height="0" aria-hidden="true" focusable="false">
-    <clipPath id="blob" clipPathUnits="objectBoundingBox">
-      <path d="M0.33,0.015 C0.58,-0.02 0.86,0.02 0.965,0.17 C1.02,0.30 0.99,0.52 0.975,0.70 C0.96,0.88 0.85,0.995 0.72,0.99 C0.61,0.985 0.57,0.88 0.585,0.74 C0.60,0.60 0.53,0.47 0.36,0.445 C0.18,0.42 0.03,0.36 0.03,0.23 C0.03,0.09 0.15,0.035 0.33,0.015 Z"/>
-    </clipPath>
-    <clipPath id="blob-sp" clipPathUnits="objectBoundingBox">
-      <path d="M0.20,0.04 C0.42,-0.01 0.80,0.00 0.93,0.10 C1.03,0.20 0.99,0.55 0.95,0.74 C0.91,0.93 0.74,1.0 0.52,0.985 C0.30,0.97 0.10,0.93 0.045,0.74 C-0.01,0.55 0.00,0.25 0.05,0.15 C0.08,0.08 0.12,0.055 0.20,0.04 Z"/>
-    </clipPath>
-  </svg>
-
-  <div class="hero__copy">
+<!-- ===== 1. ヒーロー（作品が主役：言葉＋作った画面が流れる帯） ===== -->
+<section class="hero" id="hero" data-once="hw-hero3" aria-label="Harukaze Works">
+  <div class="hero__top">
     <h1 class="hero__h">
       <span class="hero__l"><span class="hero__r">小さなお店に、</span></span>
       <span class="hero__l hero__l--2"><span class="hero__r">身近なウェブ担当を。</span></span>
     </h1>
-    <p class="hero__sub">中小企業の事業計画書を150本以上書いてきた経験で、お店や会社の「選ばれる理由」を言葉にして、ホームページにします。</p>
-    <p class="hero__cta"><a class="btn btn--line" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む<i aria-hidden="true">→</i></a></p>
+    <div class="hero__side">
+      <p class="hero__sub">中小企業の事業計画書を150本以上書いてきた経験で、お店や会社の「選ばれる理由」を言葉にして、ホームページにします。</p>
+      <p class="hero__cta"><a class="btn btn--fill" href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む<i aria-hidden="true">→</i></a></p>
+    </div>
   </div>
 
-  <button class="hero__pause" type="button" aria-pressed="false" aria-label="画面の入れ替わりを止める"><span class="hero__pause-i" aria-hidden="true"></span><span class="hero__pause-t">止める</span></button>
+  <div class="strip" aria-label="これまでに作ったホームページ">
+    <p class="strip__lb">これまでに作ったホームページ</p>
+    <div class="strip__view">
+      <ul class="strip__track">
+      <li class="strip__g">
+        <a href="https://yui-kosugi.com/" target="_blank" rel="noopener">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_kosugi_pc.jpg" width="1152" height="720" alt="小杉結ヴァイオリン教室のパソコン表示" decoding="async">
+            <img class="strip__sp" src="images/strip_kosugi_sp.jpg" width="332" height="718" alt="小杉結ヴァイオリン教室のスマホ表示" decoding="async">
+          </span>
+          <span class="strip__cap"><b>小杉結ヴァイオリン教室</b>ヴァイオリン教室・演奏活動</span>
+        </a>
+      </li>
+      <li class="strip__g">
+        <a href="https://sunny-care-cocoro.com/" target="_blank" rel="noopener">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_sunny_pc.jpg" width="1152" height="720" alt="Sunny Care～こころ～のパソコン表示" decoding="async" loading="lazy">
+            <img class="strip__sp" src="images/strip_sunny_sp.jpg" width="332" height="718" alt="Sunny Care～こころ～のスマホ表示" decoding="async" loading="lazy">
+          </span>
+          <span class="strip__cap"><b>Sunny Care～こころ～</b>リラクゼーション</span>
+        </a>
+      </li>
+      <li class="strip__g">
+        <a href="https://lunon-ballet.netlify.app/" target="_blank" rel="noopener">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_lunon_pc.jpg" width="1152" height="720" alt="lunon balletのパソコン表示" decoding="async" loading="lazy">
+            <img class="strip__sp" src="images/strip_lunon_sp.jpg" width="332" height="718" alt="lunon balletのスマホ表示" decoding="async" loading="lazy">
+          </span>
+          <span class="strip__cap"><b>lunon ballet</b>大人のバレエサークル</span>
+        </a>
+      </li>
+      <li class="strip__g" aria-hidden="true">
+        <a href="https://yui-kosugi.com/" target="_blank" rel="noopener" tabindex="-1">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_kosugi_pc.jpg" width="1152" height="720" alt="" decoding="async" loading="lazy">
+            <img class="strip__sp" src="images/strip_kosugi_sp.jpg" width="332" height="718" alt="" decoding="async" loading="lazy">
+          </span>
+          <span class="strip__cap"><b>小杉結ヴァイオリン教室</b>ヴァイオリン教室・演奏活動</span>
+        </a>
+      </li>
+      <li class="strip__g" aria-hidden="true">
+        <a href="https://sunny-care-cocoro.com/" target="_blank" rel="noopener" tabindex="-1">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_sunny_pc.jpg" width="1152" height="720" alt="" decoding="async" loading="lazy">
+            <img class="strip__sp" src="images/strip_sunny_sp.jpg" width="332" height="718" alt="" decoding="async" loading="lazy">
+          </span>
+          <span class="strip__cap"><b>Sunny Care～こころ～</b>リラクゼーション</span>
+        </a>
+      </li>
+      <li class="strip__g" aria-hidden="true">
+        <a href="https://lunon-ballet.netlify.app/" target="_blank" rel="noopener" tabindex="-1">
+          <span class="strip__shots">
+            <img class="strip__pc" src="images/strip_lunon_pc.jpg" width="1152" height="720" alt="" decoding="async" loading="lazy">
+            <img class="strip__sp" src="images/strip_lunon_sp.jpg" width="332" height="718" alt="" decoding="async" loading="lazy">
+          </span>
+          <span class="strip__cap"><b>lunon ballet</b>大人のバレエサークル</span>
+        </a>
+      </li>
+      </ul>
+    </div>
+    <button class="strip__pause" type="button" aria-pressed="false" aria-label="作品の帯の動きを止める"><span class="strip__pause-i" aria-hidden="true"></span><span class="strip__pause-t">止める</span></button>
+  </div>
 
   <ul class="hero__band">
     <li><small>サンプル制作</small><b>無料</b></li>
@@ -168,40 +204,40 @@
 
 <!-- ===== 4. 3つの強み ===== -->
 <section class="sec str" id="strength">
-  <div class="wrap">
-    <p class="lb a03e">Harukaze Works の3つの強み</p>
+  <div class="wrap str__in">
+    <div class="str__head">
+      <p class="lb a03e">Harukaze Works の3つの強み</p>
+      <h2 class="h2 a03e" style="--d:.15s">見た目の前に、<br>何を書くかを決めます。</h2>
+    </div>
+    <ol class="str__list">
+      <li class="str__item a03e">
+        <p class="str__no">01</p>
+        <div>
+          <h3>事業から考えます</h3>
+          <p>事業計画書を150本以上書いてきたやり方で、お話からお店の強みを整理し、伝える順番を決めてからページにします。</p>
+        </div>
+      </li>
+      <li class="str__item str__item--tones a03e">
+        <p class="str__no">02</p>
+        <div>
+          <h3>3つのデザインから選べます</h3>
+          <p>完成イメージを3パターン、スマホで動かして比べてから選べます。下は架空の定食屋「こもれび食堂」で作った見本です。</p>
+          <div class="str__tones" aria-label="同じお店を3つのデザインで作った見本">
+            <figure><img src="images/tone_natural.jpg" width="480" height="1000" alt="見本：やさしいデザイン" loading="lazy" decoding="async"><figcaption>やさしい</figcaption></figure>
+            <figure><img src="images/tone_stylish.jpg" width="480" height="1000" alt="見本：スタイリッシュなデザイン" loading="lazy" decoding="async"><figcaption>スタイリッシュ</figcaption></figure>
+            <figure><img src="images/tone_wa.jpg" width="480" height="1000" alt="見本：和風のデザイン" loading="lazy" decoding="async"><figcaption>和風</figcaption></figure>
+          </div>
+        </div>
+      </li>
+      <li class="str__item a03e">
+        <p class="str__no">03</p>
+        <div>
+          <h3>作ったあとも、身近に相談できます</h3>
+          <p>公開したあとの小さな直しも、LINEで気軽にご相談ください。サイトの名義はお客様。長い契約の縛りはなく、月額はご希望の方だけです。</p>
+        </div>
+      </li>
+    </ol>
   </div>
-
-  <article class="str__row">
-    <figure class="str__pic"><img src="images/photo_sketch.jpg" width="1600" height="1067" alt="" loading="lazy" decoding="async"></figure>
-    <div class="str__body">
-      <p class="str__no a03e">01</p>
-      <h3 class="h2 a03e" style="--d:.1s">事業から考えます。</h3>
-      <p class="a03e" style="--d:.2s">事業計画書を150本以上書いてきたやり方で、お話からお店の強みを整理し、伝える順番を決めてからページにします。見た目より先に、何を書くかを決めます。</p>
-    </div>
-  </article>
-
-  <article class="str__row str__row--r">
-    <div class="str__tones" aria-label="同じお店を3つのデザインで作った見本">
-      <figure class="str__tone str__tone--1 a03e"><img src="images/tone_natural.jpg" width="480" height="1000" alt="見本：やさしいデザイン" loading="lazy" decoding="async"><figcaption>やさしい</figcaption></figure>
-      <figure class="str__tone str__tone--2 a03e" style="--d:.15s"><img src="images/tone_stylish.jpg" width="480" height="1000" alt="見本：スタイリッシュなデザイン" loading="lazy" decoding="async"><figcaption>スタイリッシュ</figcaption></figure>
-      <figure class="str__tone str__tone--3 a03e" style="--d:.3s"><img src="images/tone_wa.jpg" width="480" height="1000" alt="見本：和風のデザイン" loading="lazy" decoding="async"><figcaption>和風</figcaption></figure>
-    </div>
-    <div class="str__body">
-      <p class="str__no a03e">02</p>
-      <h3 class="h2 a03e" style="--d:.1s">3つのデザインから選べます。</h3>
-      <p class="a03e" style="--d:.2s">完成イメージを3パターン、スマホで動かして比べてから選べます。写真は架空の定食屋「こもれび食堂」で作った見本です。</p>
-    </div>
-  </article>
-
-  <article class="str__row">
-    <figure class="str__pic"><img src="images/photo_desk.jpg" width="1600" height="1065" alt="" loading="lazy" decoding="async"></figure>
-    <div class="str__body">
-      <p class="str__no a03e">03</p>
-      <h3 class="h2 a03e" style="--d:.1s">作ったあとも、身近に相談できます。</h3>
-      <p class="a03e" style="--d:.2s">公開したあとの小さな直しも、LINEで気軽にご相談ください。サイトの名義はお客様。長い契約の縛りはなく、月額はご希望の方だけです。</p>
-    </div>
-  </article>
 </section>
 
 <!-- ===== 5. 進め方 ===== -->
@@ -435,6 +471,6 @@
 
 <div class="spbar"><a href="https://lin.ee/rZupack" target="_blank" rel="noopener">LINEで無料サンプルを頼む</a></div>
 
-<script src="js/v3.js?v=20261116"></script>
+<script src="js/v3.js?v=20261117"></script>
 </body>
 </html>
